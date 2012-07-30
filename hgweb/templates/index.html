@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block titletags -%}
+  <title>{% block title %}{{ config['SITE_TITLE'] }}{% endblock %}</title>
+  <meta name="DC.title" content="{{ config['SITE_TITLE'] }}"/>
+{%- endblock %}
+{% block headline %}{% endblock %}
+{% block content %}
+  <div class="row">
+    <div class="span8">
+      <p>Move along, nothing here yet.</p>
+    </div>
+  </div>
+  {#<div id="featured">
+    <a href="http://rootconf.in/"><img src="{{ url_for('static', filename='img/featured/rootconf.png') }}"></a>
+    <a href="http://fifthelephant.in/">The Fifth Elephant</a>
+  </div>#}
+{% endblock %}

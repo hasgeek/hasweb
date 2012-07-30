@@ -1,0 +1,113 @@
+.widget-boxes {
+  display: table;
+}
+.widget-boxes .widget {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-right: 1em;
+}
+
+.twtr-widget {
+  margin-bottom: 4px;
+  /* Hardcoded for font's baseline */
+}
+
+.twtr-timeline, .twtr-doc {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+#footer-twitter {
+  height: 18px;
+}
+
+#root {
+  margin-bottom: -101px;
+}
+#root #root_footer {
+  height: 101px;
+}
+
+footer {
+  min-height: 91px;
+}
+footer .footer-inner {
+  min-height: 91px;
+}
+footer .container {
+  text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+  #root {
+    margin-bottom: -263px;
+  }
+  #root #root_footer {
+    height: 263px;
+  }
+
+  footer {
+    min-height: 253px;
+  }
+  footer .footer-inner {
+    min-height: 253px;
+  }
+  footer .container {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  #root {
+    margin-bottom: -209px;
+  }
+  #root #root_footer {
+    height: 209px;
+  }
+
+  footer {
+    min-height: 199px;
+  }
+  footer .footer-inner {
+    min-height: 199px;
+  }
+  footer .container {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  #root {
+    margin-bottom: -130px;
+  }
+  #root #root_footer {
+    height: 130px;
+  }
+
+  footer {
+    min-height: 120px;
+  }
+  footer .footer-inner {
+    min-height: 120px;
+  }
+  footer .container {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 980px) and (max-width: 1199px) {
+  #root {
+    margin-bottom: -112px;
+  }
+  #root #root_footer {
+    height: 112px;
+  }
+
+  footer {
+    min-height: 102px;
+  }
+  footer .footer-inner {
+    min-height: 102px;
+  }
+  footer .container {
+    text-align: left;
+  }
+}

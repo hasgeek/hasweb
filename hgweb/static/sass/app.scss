@@ -1,0 +1,26 @@
+// Insert app styles here
+
+.widget-boxes {
+    display: table;
+    .widget {
+        display: table-cell;
+        vertical-align: bottom;
+        padding-right: 1em;
+    }
+}
+
+.twtr-widget {
+    margin-bottom: 4px; /* Hardcoded for font's baseline */
+}
+
+.twtr-timeline, .twtr-doc {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+#footer-twitter {
+    height: 18px;
+}
+
+@import "footer";
