@@ -19,21 +19,21 @@
 }
 
 #footer-twitter {
-  height: 18px;
+  height: 22px;
 }
 
 #root {
-  margin-bottom: -101px;
+  margin-bottom: -106px;
 }
 #root #root_footer {
-  height: 101px;
+  height: 106px;
 }
 
 footer {
-  min-height: 91px;
+  min-height: 96px;
 }
 footer .footer-inner {
-  min-height: 91px;
+  min-height: 96px;
 }
 footer .container {
   text-align: left;
@@ -41,17 +41,17 @@ footer .container {
 
 @media screen and (max-width: 480px) {
   #root {
-    margin-bottom: -263px;
+    margin-bottom: -301px;
   }
   #root #root_footer {
-    height: 263px;
+    height: 301px;
   }
 
   footer {
-    min-height: 253px;
+    min-height: 291px;
   }
   footer .footer-inner {
-    min-height: 253px;
+    min-height: 291px;
   }
   footer .container {
     text-align: left;
@@ -59,17 +59,17 @@ footer .container {
 }
 @media screen and (min-width: 481px) and (max-width: 767px) {
   #root {
-    margin-bottom: -209px;
+    margin-bottom: -257px;
   }
   #root #root_footer {
-    height: 209px;
+    height: 257px;
   }
 
   footer {
-    min-height: 199px;
+    min-height: 247px;
   }
   footer .footer-inner {
-    min-height: 199px;
+    min-height: 247px;
   }
   footer .container {
     text-align: left;
@@ -77,17 +77,17 @@ footer .container {
 }
 @media screen and (min-width: 768px) and (max-width: 979px) {
   #root {
-    margin-bottom: -130px;
+    margin-bottom: -150px;
   }
   #root #root_footer {
-    height: 130px;
+    height: 150px;
   }
 
   footer {
-    min-height: 120px;
+    min-height: 140px;
   }
   footer .footer-inner {
-    min-height: 120px;
+    min-height: 140px;
   }
   footer .container {
     text-align: left;
@@ -95,17 +95,17 @@ footer .container {
 }
 @media screen and (min-width: 980px) and (max-width: 1199px) {
   #root {
-    margin-bottom: -112px;
+    margin-bottom: -128px;
   }
   #root #root_footer {
-    height: 112px;
+    height: 128px;
   }
 
   footer {
-    min-height: 102px;
+    min-height: 118px;
   }
   footer .footer-inner {
-    min-height: 102px;
+    min-height: 118px;
   }
   footer .container {
     text-align: left;
