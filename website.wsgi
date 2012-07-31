@@ -3,4 +3,4 @@ import os.path
 from os import environ
 sys.path.insert(0, os.path.dirname(__file__))
 environ['ENVIRONMENT'] = 'production'
-from hgweb import app as application
+from hasweb import app as application

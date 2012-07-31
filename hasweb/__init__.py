@@ -16,8 +16,8 @@ pages = FlatPages(app)
 
 # Second, after config, import the models and views
 
-import hgweb.models
-import hgweb.views
+import hasweb.models
+import hasweb.views
 
 # Third, setup baseframe and assets
 

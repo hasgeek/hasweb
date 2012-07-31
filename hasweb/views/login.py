@@ -5,8 +5,8 @@ from flask.ext.lastuser import LastUser
 from flask.ext.lastuser.sqlalchemy import UserManager
 from coaster.views import get_next_url
 
-from hgweb import app
-from hgweb.models import db, User
+from hasweb import app
+from hasweb.models import db, User
 
 lastuser = LastUser(app)
 lastuser.init_usermanager(UserManager(db, User))
