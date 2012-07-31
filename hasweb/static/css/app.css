@@ -1,3 +1,51 @@
+#page-header.masthead {
+  padding-top: 22px;
+}
+
+.masthead {
+  font-size: 30px;
+  line-height: 44px;
+}
+.masthead a, .masthead a:hover, .masthead a:active {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #005580;
+}
+.masthead a:hover, .masthead a:active {
+  border-bottom-width: 2px;
+}
+.masthead p.primary {
+  font-size: 30px;
+  line-height: 44px;
+}
+.masthead p.secondary {
+  font-size: 25px;
+  line-height: 44px;
+}
+.masthead p.tertiary {
+  margin-top: 22px;
+  font-size: 19px;
+  line-height: 33px;
+}
+.masthead .s1 {
+  color: #816894;
+}
+.masthead .s1 a {
+  border-bottom-color: #816894;
+}
+.masthead .s2 {
+  color: #df5e0e;
+}
+.masthead .s2 a {
+  border-bottom-color: #df5e0e;
+}
+.masthead .s3 {
+  color: #f0a40c;
+}
+.masthead .s3 a {
+  border-bottom-color: #f0a40c;
+}
+
 .widget-boxes {
   display: table;
 }

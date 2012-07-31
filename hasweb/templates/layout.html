@@ -16,23 +16,23 @@
       <img src="{{ url_for('static', filename='img/footer.png') }}" width="75" alt="HasGeek" />
     </div>
     <div class="span6" id="legal">
-      <ul class="link-list-line">
+      {#<ul class="link-list-line">
         <li><a href="{{ url_for('about') }}">About HasGeek</a></li>
         <li><a href="{{ url_for('sitepolicy', path='terms') }}">Terms &amp; Conditions</a></li>
         <li><a href="{{ url_for('sitepolicy', path='privacy') }}">Privacy Policy</a></li>
         <li><a href="{{ url_for('about', path='contact') }}">Contact Us</a></li>
-      </ul>
+      </ul>#}
       <p>
         Copyright &copy; 2010-12 HasGeek Media LLP &mdash; All rights reserved
       </p>
     </div>
     <div class="span5">
-      <p id="footer-twitter">
-        <a href="http://twitter.com/hasgeek" class="twitter-follow-button">Follow @hasgeek</a>
-      </p>
       <p>
         Hosted by <a href="http://e2enetworks.com/">E2E Networks</a> and supported by
         <a href="http://cis-india.org/">The Centre for Internet and Society</a>.
+      </p>
+      <p id="footer-twitter">
+        <a href="http://twitter.com/hasgeek" class="twitter-follow-button">Follow @hasgeek</a>
       </p>
     </div>
   </div>
