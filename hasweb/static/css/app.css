@@ -28,16 +28,16 @@
   margin-bottom: 0;
 }
 .masthead .s1 {
-  color: #816894;
-}
-.masthead .s1 a {
-  border-bottom-color: #816894;
-}
-.masthead .s2 {
   color: #df5e0e;
 }
-.masthead .s2 a {
+.masthead .s1 a {
   border-bottom-color: #df5e0e;
+}
+.masthead .s2 {
+  color: #816894;
+}
+.masthead .s2 a {
+  border-bottom-color: #816894;
 }
 .masthead .s3 {
   color: #f0a40c;
