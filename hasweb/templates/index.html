@@ -8,20 +8,14 @@
   <header>
     {{ networkbar(siteid=config['SITE_ID'], login=false) }}
     <div id="page-header" class="container masthead">
-      <div class="row">
-        <div class="span2">
-          <img src="{{ url_for('static', filename='img/hg-banner.png') }}" alt="HasGeek logo" />
-        </div>
-        <div class="span10">
-          <p class="primary">
-            <span class="s1">We are HasGeek.</span>
-            <span class="s2">We create discussion spaces for geeks.</span>
-            <span class="s3">Come to our events to meet like-minded people,</span>
-            <span class="s1">learn new things</span>
-            <span class="s2">and discover new opportunities.</span>
-          </p>
-        </div>
-      </div>
+      <img src="{{ url_for('static', filename='img/hg-banner.png') }}" alt="HasGeek logo" class="logo" width="185" height="139" />
+      <p class="primary">
+        <span class="s1">We are HasGeek.</span>
+        <span class="s2">We create discussion spaces for geeks.</span>
+        <span class="s3">Come to our events to meet like-minded people,</span>
+        <span class="s1">learn new things</span>
+        <span class="s2">and discover new opportunities.</span>
+      </p>
     </div>
   </header>
 {% endblock %}

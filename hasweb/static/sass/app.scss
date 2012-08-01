@@ -7,16 +7,9 @@ $body-line-height: 22px;
 .masthead {
     font-size: 30px;
     line-height: $body-line-height * 2;
-    /*
-    a, a:hover, a:active {
-        color: inherit;
-        text-decoration: none;
-        border-bottom: 1px solid #005580;
+    img.logo {
+        float: left;
     }
-    a:hover, a:active {
-        border-bottom-width: 2px;
-    }
-    */
     p {
         // margin-top: $body-line-height;
         margin-bottom: $body-line-height * 1.5;
@@ -24,6 +17,7 @@ $body-line-height: 22px;
         line-height: $body-line-height * 1.5;
     }
     p.primary {
+        margin-left: 200px;
         font-size: 30px;
         line-height: $body-line-height * 2;
         margin-bottom: 0;
@@ -72,3 +66,14 @@ $body-line-height: 22px;
 }
 
 @import "footer";
+
+@media screen and (max-width: 767px) {
+    .masthead {
+        img.logo {
+            float: none;
+        }
+        p.primary {
+            margin-left: 0;
+        }
+    }
+}

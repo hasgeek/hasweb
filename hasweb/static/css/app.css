@@ -6,16 +6,9 @@
 .masthead {
   font-size: 30px;
   line-height: 44px;
-  /*
-  a, a:hover, a:active {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid #005580;
-  }
-  a:hover, a:active {
-      border-bottom-width: 2px;
-  }
-  */
+}
+.masthead img.logo {
+  float: left;
 }
 .masthead p {
   margin-bottom: 33px;
@@ -23,6 +16,7 @@
   line-height: 33px;
 }
 .masthead p.primary {
+  margin-left: 200px;
   font-size: 30px;
   line-height: 44px;
   margin-bottom: 0;
@@ -157,5 +151,13 @@ footer .container {
   }
   footer .container {
     text-align: left;
+  }
+}
+@media screen and (max-width: 767px) {
+  .masthead img.logo {
+    float: none;
+  }
+  .masthead p.primary {
+    margin-left: 0;
   }
 }
