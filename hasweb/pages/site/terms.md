@@ -1,14 +1,7 @@
-title: Terms & Conditions
+title: Accetaple Use Guidelines
 
-HasGeek Media LLP, including subsidiaries and affiliates (“Website” or “Website Owner” or “we” or “us” or “our”) provides the information contained on the website or any of the pages comprising the website (“website”) to visitors (“visitors”) (cumulatively referred to as “you” or “your” hereinafter) subject to the terms and conditions set out on this page, the [privacy policy](privacy) and any other relevant terms and conditions, policies and notices which may be applicable to a specific section of the website.
 
----
-
-Welcome to our website. If you continue to browse and use this website you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern HasGeek Media LLP’s relationship with you in relation to this website.
-
-The term “HasGeek Media LLP” or “us” or “we” refers to the owner of the website whose registered office is No 141/142, 2nd Cross, Pai Layout, Hulimavu Gate, Bannerghatta Road, Bangalore - 560 076, Karnataka, India. Our registration number is AAA-3107 and we are incorporated under the Limited Liability Partnership Act 2008 of India. The term “you” refers to the user or viewer of our website.
-
-The use of this website is subject to the following terms of use:
+The use of this website is subject to the following HasGeek guidelines:
 
 1. The content of the pages of this website is for your general information and use only. It is subject to change without notice.
 
