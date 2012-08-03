@@ -17,7 +17,7 @@
     }
 }
 
-@include footer-height(96px);
+@include footer-height(98px);
 
 @media screen and (max-width: 480px) {
     @include footer-height(291px);

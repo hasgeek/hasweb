@@ -65,17 +65,17 @@
 }
 
 #root {
-  margin-bottom: -106px;
+  margin-bottom: -108px;
 }
 #root #root_footer {
-  height: 106px;
+  height: 108px;
 }
 
 footer {
-  min-height: 96px;
+  min-height: 98px;
 }
 footer .footer-inner {
-  min-height: 96px;
+  min-height: 98px;
 }
 footer .container {
   text-align: left;
