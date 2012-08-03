@@ -1,4 +1,4 @@
-title:Sponsorship Terms of Service
+title: Sponsorship Terms of Service
 
 ## You must agree to these terms to advertise with HasGeek
 

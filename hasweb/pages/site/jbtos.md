@@ -1,4 +1,4 @@
-title:Job Board Terms of Service
+title: Job Board Terms of Service
 
 ## You must agree to these terms to list a job on the Job Board.
 
