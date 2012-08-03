@@ -6,7 +6,7 @@ HasGeek reserves the right to consider refunding the purchase amount for such a 
 
 ## Events
 
-You cannot cancel your ticket for an event if you have purchased that ticket using our online payment option. We may cancel an event due to unforeseen reasons or circumstances outside our control (Force Majeure events such as floods, fire, riots, terrorist incidents, bandhs, etc). If that happens we are not liable to make any refunds and fulfilment is deemed to have occurred on the date of announcement of cancellation. 
+You cannot cancel your ticket for an event if you have purchased that ticket using our online payment option. We may cancel an event due to unforeseen reasons or circumstances outside our control (Force Majeure events such as floods, fire, riots, terrorist incidents, bandhs, etc). If that happens, refund of your purchase amount will be subject to HasGeek's discretion. 
 
 ## Advertising
 

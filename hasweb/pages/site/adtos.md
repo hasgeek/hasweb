@@ -1,6 +1,6 @@
 title:Sponsorship Terms of Service
 
-## You must agree to these terms advertise at HasGeek events, websites, services or products.
+## You must agree to these terms advertise at HasGeek events, websites, services or products
 
 I understand that my advertisement is subject to full specifications and artwork provided by me at least 72 hours before the scheduled start of such advertisement.
 

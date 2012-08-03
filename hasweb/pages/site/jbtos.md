@@ -1,8 +1,8 @@
 title:Job Board Terms of Service
 
-## You must agree to these terms to list a job
+## You must agree to these terms to list a job on the Job Board.
 
-I understand that my listing may be removed if it
+I understand that my listing may be removed if it:
 
 * Is for a position that involves adult content,
 * Is an illegitimate work opportunity,

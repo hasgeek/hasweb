@@ -1,4 +1,4 @@
-title: Accetaple Use Guidelines
+title: Guidelines for Acceptable Use
 
 
 The use of this website is subject to the following HasGeek guidelines:
