@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% from 'baseframe/forms.html' import renderform %}
+{% block title %}Add a Profile Picture{% endblock %}
+{% block headline %}{% endblock -%}
+{% block content -%}
+  <div class="row">
+    <div class="span8">
+      <div class="page-header"><h1>Upload Profile Picture</h1></div>
+      {{ renderform(form, multipart=True) }}
+    </div>
+    <div class="span4">
+      <ul class="well nav nav-list section">
+        <li class="nav-header">About</li>
+        <li><a href="/about/">About HasGeek</a></li>
+        <li><a href="/about/team">Team</a></li>
+        <li><a href="/about/press">Press</a></li>
+        <li><a href="/about/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+{%- endblock %}
+
