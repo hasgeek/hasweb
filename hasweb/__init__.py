@@ -5,13 +5,15 @@
 from flask import Flask
 from flask.ext.assets import Environment, Bundle
 from flask.ext.flatpages import FlatPages
+from flask.ext.lastuser import LastUser
+from flask.ext.lastuser.sqlalchemy import UserManager
 from baseframe import baseframe, baseframe_js, baseframe_css
-from coaster import configureapp
+import coaster.app
 
 # First, make an app and config it
 
 app = Flask(__name__, instance_relative_config=True)
-configureapp(app, 'ENVIRONMENT')
+lastuser = LastUser()
 pages = FlatPages(app)
 
 # Second, after config, import the models and views
@@ -30,3 +32,10 @@ css = Bundle(baseframe_css,
              filters='cssmin', output='css/packed.css')
 assets.register('js_all', js)
 assets.register('css_all', css)
+
+
+def init_for(env):
+    coaster.app.init_app(app, env)
+    hasweb.models.db.init_app(app)
+    lastuser.init_app(app)
+    lastuser.init_usermanager(UserManager(hasweb.models.db, hasweb.models.User))
