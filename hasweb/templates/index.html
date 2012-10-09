@@ -6,7 +6,7 @@
 {%- endblock %}
 {% block headerbox %}
   <header>
-    {{ networkbar(siteid=config['SITE_ID'], login=false) }}
+    {{ networkbar(siteid=config['SITE_ID'], login=true) }}
     <div id="page-header" class="container masthead">
       <img src="{{ url_for('static', filename='img/hg-banner.png') }}" alt="HasGeek logo" class="logo" width="185" height="139" />
       <p class="primary">

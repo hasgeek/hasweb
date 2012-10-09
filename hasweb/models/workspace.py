@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from hasweb.models import db, BaseScopedNameMixin
+from . import db, BaseScopedNameMixin
 
 __all__ = ['Workspace']
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from hasweb.models import db, BaseNameMixin
+from . import db, BaseNameMixin
 
 __all__ = ['PROFILE_TYPE', 'Profile']
 
@@ -30,3 +30,11 @@ class Profile(BaseNameMixin, db.Model):
 
     def type_label(self):
         return profile_types.get(self.type, profile_types[0])
+
+    def permissions(self, user, inherited=None):
+        perms = super(Profile, self).permissions(user, inherited)
+        perms.add('view')
+        if user.userid == self.userid:
+            perms.add('edit')
+
+        return perms

@@ -1,16 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from hasweb.models import db, BaseScopedNameMixin
+from . import db, BaseScopedIdNameMixin
+from .workspace import Workspace
 
 
-# TODO: Check with Flask-tease and sort out for votes, comments
-class ProposalSpace(BaseScopedNameMixin, db.Model):
-    __tablename__ = 'proposal_space'
-
-
-class ProposalSpaceSection(BaseScopedNameMixin, db.Model):
-    __tablename__ = 'proposal_space_section'
-
-
-class Proposal(BaseScopedNameMixin, db.Model):
+class Proposal(BaseScopedIdNameMixin, db.Model):
     __tablename__ = 'proposal'
+
+    workspace_id = db.Column(None, db.ForeignKey('workspace.id'), nullable=False)
+    workspace = db.relationship(Workspace, backref=db.backref('proposals', cascade='all, delete-orphan'))
+    parent = db.synonym('workspace')
+    __table_args__ = (db.UniqueConstraint('name', 'workspace_id'),)

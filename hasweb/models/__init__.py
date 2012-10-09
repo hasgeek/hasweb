@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask.ext.sqlalchemy import SQLAlchemy
-from coaster.sqlalchemy import IdMixin, TimestampMixin, BaseMixin, BaseNameMixin, BaseScopedNameMixin
+from coaster.sqlalchemy import IdMixin, TimestampMixin, BaseMixin, BaseNameMixin, BaseScopedNameMixin, BaseScopedIdNameMixin
 from hasweb import app
 
 __all__ = ['db']

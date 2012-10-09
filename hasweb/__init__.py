@@ -5,7 +5,7 @@
 from flask import Flask
 from flask.ext.assets import Environment, Bundle
 from flask.ext.flatpages import FlatPages
-from flask.ext.lastuser import LastUser
+from flask.ext.lastuser import Lastuser
 from flask.ext.lastuser.sqlalchemy import UserManager
 from baseframe import baseframe, baseframe_js, baseframe_css
 import coaster.app
@@ -13,7 +13,7 @@ import coaster.app
 # First, make an app and config it
 
 app = Flask(__name__, instance_relative_config=True)
-lastuser = LastUser()
+lastuser = Lastuser()
 pages = FlatPages(app)
 
 # Second, after config, import the models and views
