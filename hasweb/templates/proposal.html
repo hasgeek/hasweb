@@ -1,0 +1,5 @@
+{% extends "layout.html" %}
+{% block title %}{{ proposal.title }}{% endblock %}
+{% block basecontent -%}
+    {{ proposal.description | safe }}
+{%- endblock %}

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from flask import url_for
 from . import db, BaseNameMixin
 
 __all__ = ['PROFILE_TYPE', 'Profile']
@@ -34,7 +35,16 @@ class Profile(BaseNameMixin, db.Model):
     def permissions(self, user, inherited=None):
         perms = super(Profile, self).permissions(user, inherited)
         perms.add('view')
-        if user.userid == self.userid:
+        if user and self.userid in user.user_organizations_owned_ids():
             perms.add('edit')
-
+            perms.add('delete')
+            perms.add('new')
         return perms
+
+    def url_for(self, action='view'):
+        if action == 'view':
+            return url_for('profile', profile=self.name)
+        elif action == 'edit':
+            return url_for('profile_edit', profile=self.name)
+        elif action == 'delete':
+            return url_for('profile_delete', profile=self.name)
