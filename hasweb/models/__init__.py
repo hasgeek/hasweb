@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.commentease import Commentease, VotingMixin, CommentingMixin
 from coaster.sqlalchemy import (IdMixin, TimestampMixin, BaseMixin, BaseNameMixin,
     BaseScopedNameMixin, BaseScopedIdNameMixin, make_name)
 from hasweb import app
@@ -8,6 +9,11 @@ from hasweb import app
 __all__ = ['db']
 
 db = SQLAlchemy(app)
+
+#Make votes, comments using Commentease
+
+commentease = Commentease()
+commentease.init_db(db)
 
 from hasweb.models.user import *
 from hasweb.models.profile import *

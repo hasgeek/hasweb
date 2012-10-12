@@ -2,4 +2,7 @@
 {% block title %}{{ workspace.title }}{% endblock %}
 {% block basecontent -%}
     {{ workspace.description | safe }}
+    {% for proposal in proposals %}
+        <a href="{{ proposal.url_for() }}"> {{ proposal.name }} </a><br/>
+    {% endfor %}
 {%- endblock %}

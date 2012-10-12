@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from flask import url_for
-from . import db, BaseMixin, BaseScopedNameMixin
+from . import db, BaseMixin, BaseScopedNameMixin, VotingMixin, CommentingMixin
 from .profile import Profile
+from hasweb.models import commentease
 
 
 __all__ = ['Workspace', 'WorkspaceFunnel', 'WorkspaceSchedule']
@@ -40,6 +41,53 @@ funnel_status = {
     5: u"Closed",
     6: u"Rejected"
 }
+
+
+class PROPOSAL_STATUS:
+    DRAFT = 0
+    SUBMISSIONS = 1
+    VOTING = 2
+    JURY = 3
+    FEEDBACK = 4
+    CLOSED = 5
+    REJECTED = 6
+
+
+proposal_status = {
+    0: u"Draft",
+    1: u"Submissions",
+    2: u"Voting",
+    3: u"Jury",
+    4: u"Feedback",
+    5: u"Closed",
+    6: u"Rejected"
+}
+
+
+class SPACESTATUS:
+    DRAFT = 0
+    SUBMISSIONS = 1
+    VOTING = 2
+    JURY = 3
+    FEEDBACK = 4
+    CLOSED = 5
+    REJECTED = 6
+
+
+class COMMENTSTATUS:
+    PUBLIC = 0
+    SCREENED = 1
+    HIDDEN = 2
+    SPAM = 3
+    DELETED = 4  # For when there are children to be preserved
+
+
+# What is this VoteSpace or CommentSpace attached to?
+class SPACETYPE:
+    PROPOSALSPACE = 0
+    PROPOSALSPACESECTION = 1
+    PROPOSAL = 2
+    COMMENT = 3
 
 
 class Workspace(BaseScopedNameMixin, db.Model):
@@ -117,6 +165,9 @@ class WorkspaceFunnel(BaseMixin, db.Model):
 
     status = db.Column(db.Integer, default=FUNNEL_STATUS.DRAFT, nullable=False)
     proposal_template = db.Column(db.UnicodeText, default=u"", nullable=False)
+
+    def __init__(self, **kwargs):
+        super(WorkspaceFunnel, self).__init__(**kwargs)
 
 
 class WorkspaceSchedule(BaseMixin, db.Model):
