@@ -9,7 +9,7 @@ from hasweb.models import commentease
 __all__ = ['Workspace', 'WorkspaceFunnel', 'WorkspaceSchedule']
 
 
-class WORKSPACE:
+class WORKSPACE_FLAGS:
     FUNNEL = 1
     SCHEDULE = 2
     FORUM = 4
@@ -23,71 +23,16 @@ workspace_types = {
 
 
 class FUNNEL_STATUS:
-    DRAFT = 0
-    SUBMISSIONS = 1
-    VOTING = 2
-    JURY = 3
-    FEEDBACK = 4
-    CLOSED = 5
-    REJECTED = 6
+    DRAFT = 1
+    OPEN = 2
+    CLOSED = 3
 
 
 funnel_status = {
-    0: u"Draft",
-    1: u"Submissions",
-    2: u"Voting",
-    3: u"Jury",
-    4: u"Feedback",
-    5: u"Closed",
-    6: u"Rejected"
+    1: u"Draft",
+    2: u"Open",
+    3: u"Closed",
 }
-
-
-class PROPOSAL_STATUS:
-    DRAFT = 0
-    SUBMISSIONS = 1
-    VOTING = 2
-    JURY = 3
-    FEEDBACK = 4
-    CLOSED = 5
-    REJECTED = 6
-
-
-proposal_status = {
-    0: u"Draft",
-    1: u"Submissions",
-    2: u"Voting",
-    3: u"Jury",
-    4: u"Feedback",
-    5: u"Closed",
-    6: u"Rejected"
-}
-
-
-class SPACESTATUS:
-    DRAFT = 0
-    SUBMISSIONS = 1
-    VOTING = 2
-    JURY = 3
-    FEEDBACK = 4
-    CLOSED = 5
-    REJECTED = 6
-
-
-class COMMENTSTATUS:
-    PUBLIC = 0
-    SCREENED = 1
-    HIDDEN = 2
-    SPAM = 3
-    DELETED = 4  # For when there are children to be preserved
-
-
-# What is this VoteSpace or CommentSpace attached to?
-class SPACETYPE:
-    PROPOSALSPACE = 0
-    PROPOSALSPACESECTION = 1
-    PROPOSAL = 2
-    COMMENT = 3
 
 
 class Workspace(BaseScopedNameMixin, db.Model):
@@ -103,51 +48,51 @@ class Workspace(BaseScopedNameMixin, db.Model):
 
     @property
     def has_funnel(self):
-        return True if self.feature_flags & WORKSPACE.FUNNEL else False
+        return True if self.feature_flags & WORKSPACE_FLAGS.FUNNEL else False
 
     @property
     def has_schedule(self):
-        return True if self.feature_flags & WORKSPACE.SCHEDULE else False
+        return True if self.feature_flags & WORKSPACE_FLAGS.SCHEDULE else False
 
     @property
     def has_forum(self):
-        return True if self.feature_flags & WORKSPACE.FORUM else False
+        return True if self.feature_flags & WORKSPACE_FLAGS.FORUM else False
 
     def enable_funnel(self):
         if not self.funnel:
             self.funnel = WorkspaceFunnel(workspace=self)
             db.session.add(self.funnel)
-        self.feature_flags |= WORKSPACE.FUNNEL
+        self.feature_flags |= WORKSPACE_FLAGS.FUNNEL
 
     def disable_funnel(self):
         if self.funnel:
             db.session.delete(self.funnel)
         self.funnel = None
-        self.feature_flags &= ~WORKSPACE.FUNNEL
+        self.feature_flags &= ~WORKSPACE_FLAGS.FUNNEL
 
     def enable_schedule(self):
         if not self.schedule:
             self.schedule = WorkspaceSchedule(workspace=self)
             db.session.add(self.schedule)
-        self.feature_flags |= WORKSPACE.SCHEDULE
+        self.feature_flags |= WORKSPACE_FLAGS.SCHEDULE
 
     def disable_schedule(self):
         if self.schedule:
             db.session.delete(self.schedule)
         self.schedule = None
-        self.feature_flags &= ~WORKSPACE.SCHEDULE
+        self.feature_flags &= ~WORKSPACE_FLAGS.SCHEDULE
 
     def enable_forum(self):
         if not self.forum:
             self.forum = WorkspaceForum(workspace=self)
             db.session.add(self.forum)
-        self.feature_flags |= ~WORKSPACE.FORUM
+        self.feature_flags |= ~WORKSPACE_FLAGS.FORUM
 
     def disable_forum(self):
         if self.forum:
             db.session.delete(self.forum)
         self.forum = None
-        self.feature_flags &= ~WORKSPACE.FORUM
+        self.feature_flags &= ~WORKSPACE_FLAGS.FORUM
 
     def permissions(self, user, inherited=None):
         perms = super(Workspace, self).permissions(user, inherited)
@@ -168,6 +113,9 @@ class WorkspaceFunnel(BaseMixin, db.Model):
 
     def __init__(self, **kwargs):
         super(WorkspaceFunnel, self).__init__(**kwargs)
+
+    def is_open(self):
+        return self.status == FUNNEL_STATUS.OPEN
 
 
 class WorkspaceSchedule(BaseMixin, db.Model):

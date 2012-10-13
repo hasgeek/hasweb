@@ -4,7 +4,6 @@ from flask import Markup
 import flask.ext.wtf as wtf
 from baseframe.forms import Form, RichTextField
 from hasweb.models.workspace import funnel_status
-from hasweb.models.funnel import proposal_status
 
 
 __all__ = ['ProposalForm', 'FunnelSpaceForm', 'FunnelSectionForm',

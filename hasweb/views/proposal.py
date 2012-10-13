@@ -12,8 +12,8 @@ from baseframe.forms import render_form, render_redirect, render_delete_sqla
 from hasweb import app
 from hasweb.models import Profile, db, commentease
 from hasweb.views.login import lastuser
-from hasweb.models.workspace import Workspace, WorkspaceFunnel, FUNNEL_STATUS
-from hasweb.models.funnel import FunnelSpaceSection, Proposal, PROPOSAL_STATUS
+from hasweb.models.workspace import Workspace, WorkspaceFunnel
+from hasweb.models.funnel import Proposal
 from hasweb.forms.workspace import ProposalForm, FunnelSectionForm, ConfirmSessionForm
 from hasweb.forms.comments import DeleteCommentForm
 
@@ -25,24 +25,20 @@ markdown = Markdown(safe_mode="escape").convert
 @load_models(
     (Profile, {'name': 'profile'}, 'profile'),
     (Workspace, {'name': 'workspace', 'profile': 'profile'}, 'workspace')
-)
+    )
 def funnel_new(profile, workspace):
-    workspace_funnel = WorkspaceFunnel.query.filter_by(workspace=workspace).first()
-    if not workspace.has_funnel or workspace_funnel.status is not FUNNEL_STATUS.SUBMISSIONS:
+    if not (workspace.has_funnel and workspace.funnel.is_open()):
         abort(403)
     form = ProposalForm()
     if request.method == "GET":
-        form.description.data = workspace_funnel.proposal_template
-    form.section_id.choices = [(item.id, item.name) for item in FunnelSpaceSection.query.filter_by(workspace_funnel=workspace_funnel, public=True).order_by('title')]
+        form.description.data = workspace.funnel.proposal_template
     if form.validate_on_submit():
-        proposal = Proposal(workspace_funnel=workspace_funnel)
-        profile = Profile.query.filter_by(userid=g.user.userid).first()
-        proposal.profile = profile
+        proposal = Proposal(funnel=workspace.funnel)
+        proposal.user = g.user
         form.populate_obj(proposal)
         if not proposal.name:
             proposal.make_name()
         proposal.make_id()
-        proposal.status = PROPOSAL_STATUS.SUBMISSIONS
         proposal.votes.vote(g.user)
         db.session.add(proposal)
         db.session.commit()

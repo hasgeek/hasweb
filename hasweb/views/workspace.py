@@ -6,7 +6,7 @@ from baseframe.forms import render_form, render_redirect, render_delete_sqla
 from hasweb import app
 from hasweb.models import Profile, db
 from hasweb.views.login import lastuser
-from hasweb.models.workspace import Workspace, WORKSPACE, WorkspaceFunnel
+from hasweb.models.workspace import Workspace, WorkspaceFunnel
 from hasweb.models.funnel import Proposal
 from hasweb.models.profile import PROFILE_TYPE
 from hasweb.forms.workspace import FunnelSpaceForm
@@ -34,15 +34,14 @@ def funnel_new(profile):
         abort(403)
     if form.validate_on_submit():
         workspace = Workspace(profile=profile)
-        workspace_funnel = WorkspaceFunnel(workspace=workspace)
+        workspace.enable_funnel()
         form.populate_obj(workspace)
         if not workspace.name:
             workspace.make_name()
-        workspace_funnel.status = workspace.status
-        workspace_funnel.proposal_template = workspace.proposal_template
-        workspace.feature_flags = WORKSPACE.FUNNEL
+        # workspace.status and workspace.proposal_template are temp variables that came from the form
+        workspace.funnel.status = workspace.status
+        workspace.funnel.proposal_template = workspace.proposal_template
         db.session.add(workspace)
-        db.session.add(workspace_funnel)
         db.session.commit()
         flash(u"Created Event '%s'" % workspace.title, 'success')
         return render_redirect(workspace.url_for(), code=303)
