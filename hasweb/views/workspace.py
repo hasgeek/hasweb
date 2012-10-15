@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from flask import render_template, abort, flash, g
+from flask import render_template, abort, flash
 from coaster.views import load_models, load_model
 from baseframe.forms import render_form, render_redirect, render_delete_sqla
 from hasweb import app
@@ -30,7 +30,7 @@ def workspace_view(profile, workspace, workspace_funnel):
 @load_model(Profile, {'name': 'profile'}, 'profile', permission='new')
 def funnel_new(profile):
     form = FunnelSpaceForm()
-    if profile.type != PROFILE_TYPE.ORGANIZATION:
+    if profile.type not in [PROFILE_TYPE.ORGANIZATION, PROFILE_TYPE.EVENTSERIES]:
         abort(403)
     if form.validate_on_submit():
         workspace = Workspace(profile=profile)

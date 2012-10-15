@@ -112,6 +112,7 @@ class Proposal(BaseScopedIdNameMixin, VotingMixin, CommentingMixin, db.Model):
     confirmed = db.Column(db.Boolean, default=False, nullable=False)
     session_type = db.Column(db.Unicode(40), nullable=False)
     technical_level = db.Column(db.Unicode(40), nullable=False)
+    email = db.Column(db.Unicode(80), nullable=True)
     bio = db.Column(db.UnicodeText, default=u"", nullable=False)
     tags = db.relationship(Tag, secondary=proposal_tags)
     phone = db.Column(db.Unicode(15), nullable=False)
@@ -141,6 +142,8 @@ class Proposal(BaseScopedIdNameMixin, VotingMixin, CommentingMixin, db.Model):
             return url_for('voteupsession', profile=workspace.profile.name, workspace=workspace.name, proposal=self.url_name)
         elif action == 'votedownsession':
             return url_for('votedownsession', profile=workspace.profile.name, workspace=workspace.name, proposal=self.url_name)
+        elif action == 'confirm_session':
+            return url_for('confirm_session', profile=workspace.profile.name, workspace=workspace.name, proposal=self.url_name)
 
     def __repr__(self):
         return u'<Proposal "%s" in space "%s" by "%s">' % (self.title, self.title, self.user.fullname)

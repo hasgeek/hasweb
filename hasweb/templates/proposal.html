@@ -53,7 +53,7 @@
       {%- else -%}
         (proposing)
       {%- endif %}
-      {% if proposal.profile.userid == g.user.userid -%}
+      {% if proposal.profile == g.user.profile -%}
         <small>(that’s you! <a href="{{ proposal.url_for('edit') }}">Edit this</a>? <a href="{{ proposal.url_for('delete') }}">Delete this</a>?)</small>
       {%- endif %}
     </p>
@@ -62,8 +62,9 @@
       <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="hasgeek">Tweet</a>
       <g:plusone size="medium"></g:plusone>
       <iframe class="facebooklike" src="http://www.facebook.com/plugins/like.php?app_id=114496105304651&amp;href={{ request.url }}&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+      {{ g.lastuserinfo.permissions }}
       {% if 'siteadmin' in g.lastuserinfo.permissions %}
-        <form method="POST" action="{{ url_for('confirmsession', name=workspace.name, slug=proposal.urlname) }}" style="float: left">
+        <form method="POST" action="{{ proposal.url_for('confirmsession') }}" style="float: left">
           {{ confirmform.hidden_tag() }}
           {% if proposal.confirmed -%}
             <button type="submit">Cancel Session</button>

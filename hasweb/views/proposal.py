@@ -33,6 +33,7 @@ def funnel_new(profile, workspace):
     form = ProposalForm()
     if request.method == "GET":
         form.description.data = workspace_funnel.proposal_template
+        form.email.data = g.user.email
     form.section_id.choices = [(item.id, item.name) for item in FunnelSpaceSection.query.filter_by(workspace_funnel=workspace_funnel, public=True).order_by('title')]
     if form.validate_on_submit():
         proposal = Proposal(workspace_funnel=workspace_funnel)
@@ -126,7 +127,8 @@ def funnel_edit(profile, workspace, proposal):
     workspace_funnel = WorkspaceFunnel.query.filter_by(workspace=workspace).first()
     form.section_id.choices = [(item.id, item.name) for item in FunnelSpaceSection.query.filter_by(workspace_funnel=workspace_funnel, public=True).order_by('title')]
     if request.method == 'GET':
-        form.is_speaking.data = proposal.profile == g.user
+        form.is_speaking.data = proposal.profile == g.user.profile
+        form.email.data = g.user.email
     if form.validate_on_submit():
         form.populate_obj(proposal)
         if not proposal.name:
@@ -150,6 +152,25 @@ def funnel_delete(profile, workspace, proposal):
         message=u"Delete Proposal '%s'? This cannot be undone." % proposal.title,
         success=u"You have deleted proposal '%s'." % proposal.title,
         next=workspace.url_for())
+
+
+@app.route('/<profile>/<workspace>/funnel/<proposal>/confirm', methods=['POST'])
+@lastuser.requires_permission('siteadmin')
+@load_models(
+    (Profile, {'name': 'profile'}, 'profile'),
+    (Workspace, {'name': 'workspace', 'profile': 'profile'}, 'workspace'),
+    (Proposal, {'url_name': 'proposal'}, 'proposal'), permission='delete'
+)
+def confirm_session(profile, workspace, proposal):
+    form = ConfirmSessionForm()
+    if form.validate_on_submit():
+        proposal.confirmed = not proposal.confirmed
+        db.session.commit()
+        if proposal.confirmed:
+            flash("This proposal has been confirmed.", 'success')
+        else:
+            flash("This session has been cancelled.", 'success')
+    return redirect(proposal.url_for())
 
 
 @app.route('/<profile>/<workspace>/funnel/<proposal>/cancelvote', endpoint='cancelsessionvote')

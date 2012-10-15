@@ -43,6 +43,9 @@ class ProposalForm(Form):
     title = wtf.TextField('Title', validators=[wtf.Required()])
     description = wtf.TextAreaField(u"Description", default=u"",
         validators=[wtf.Required()])
+    email = wtf.html5.EmailField('Your email address', validators=[wtf.Required()],
+        description="An email address we can contact you at. "\
+            "Not displayed anywhere")
     session_type = wtf.RadioField('Session type', validators=[wtf.Required()], choices=[
         ('Lecture', 'Lecture'),
         ('Demo', 'Demo'),
