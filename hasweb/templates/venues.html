@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}All Venues {% endblock %}
+{% block basecontent -%}
+    {% for venue in venues %}
+        <a href="{{ venue.url_for() }}"> {{venue.name }} </a>
+    {% endfor %}
+{%- endblock %}
