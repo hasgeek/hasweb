@@ -22,7 +22,7 @@ class Schedule(BaseMixin, db.Model):
     workspace_funnel_id = db.Column(None, db.ForeignKey('workspace_funnel.id'), nullable=False)
     workspace_funnel = db.relationship(WorkspaceFunnel,
         backref=db.backref('workspace_funnels', cascade='all, delete-orphan'))
-    proposal_id = db.Column(None, db.ForeignKey('funnel.id'), nullable=False)
+    proposal_id = db.Column(None, db.ForeignKey('proposal.id'), nullable=False)
     proposal = db.relationship(Proposal,
         backref=db.backref('schdeule_proposals', cascade='all, delete-orphan'))
     start_datetime = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)

@@ -4,7 +4,6 @@ from flask import Markup
 import flask.ext.wtf as wtf
 from baseframe.forms import Form, RichTextField
 from hasweb.models.workspace import funnel_status
-from hasweb.models.funnel import proposal_status
 
 
 __all__ = ['ProposalForm', 'FunnelSpaceForm', 'FunnelSectionForm',
@@ -43,7 +42,7 @@ class ProposalForm(Form):
     title = wtf.TextField('Title', validators=[wtf.Required()])
     description = wtf.TextAreaField(u"Description", default=u"",
         validators=[wtf.Required()])
-    email = wtf.html5.EmailField('Your email address', validators=[wtf.Required()],
+    """email = wtf.html5.EmailField('Your email address', validators=[wtf.Required()],
         description="An email address we can contact you at. "\
             "Not displayed anywhere")
     session_type = wtf.RadioField('Session type', validators=[wtf.Required()], choices=[
@@ -59,14 +58,15 @@ class ProposalForm(Form):
         ('Intermediate', 'Intermediate'),
         ('Advanced', 'Advanced'),
         ])
+    """
     is_speaking = wtf.RadioField("Are you speaking?", coerce=int,
         choices=[(1, u"I will be speaking"),
                  (0, u"I’m proposing a topic for someone to speak on")])
-    bio = wtf.TextAreaField(u"Bio", default=u"", validators=[wtf.Required()])
-    phone = wtf.TextField(u'Phone number', validators=[wtf.Required()],
-        description=u"A phone number we can call you at to discuss your proposal, if required. "
-            "Will not be displayed")
-    section_id = wtf.SelectField(u'Section', coerce=int)
+    #bio = wtf.TextAreaField(u"Bio", default=u"", validators=[wtf.Required()])
+    #phone = wtf.TextField(u'Phone number', validators=[wtf.Required()],
+    #    description=u"A phone number we can call you at to discuss your proposal, if required. "
+    #        "Will not be displayed")
+    #section_id = wtf.SelectField(u'Section', coerce=int)
 
 
 class ConfirmSessionForm(wtf.Form):
