@@ -110,9 +110,8 @@ def venue_campus_edit(venue_campus, venue_room):
     return render_form(form=form, title="Venue Room", submit=u"Save",
         cancel_url=venue_campus.url_for(), ajax=True)
 
-"""
+
 @app.route('/venues', methods=['GET'])
 def venues_edit():
-    venues = Venue.query.all()
+    venues = VenueCampus.query.all()
     return render_template('venues.html', venues=venues)
-"""

@@ -6,7 +6,7 @@ from .profile import Profile
 from hasweb.models import commentease
 
 
-__all__ = ['Workspace', 'WorkspaceFunnel', 'WorkspaceSchedule']
+__all__ = ['Workspace', 'WorkspaceFunnel', 'WorkspaceSchedule', 'WORKSPACE_FLAGS']
 
 
 class WORKSPACE_FLAGS:
@@ -46,6 +46,16 @@ class Workspace(BaseScopedNameMixin, db.Model):
 
     feature_flags = db.Column(db.Integer, default=0, nullable=False)
 
+    def permissions(self, user, inherited=None):
+        perms = super(Workspace, self).permissions(user, inherited)
+        perms.add('view')
+        perms.add('new')
+        if user and self.profile.userid in user.user_organizations_owned_ids():
+            perms.add('edit')
+            perms.add('delete')
+            perms.add('new')
+        return perms
+
     @property
     def has_funnel(self):
         return True if self.feature_flags & WORKSPACE_FLAGS.FUNNEL else False
@@ -70,39 +80,50 @@ class Workspace(BaseScopedNameMixin, db.Model):
         if self.funnel:
             db.session.delete(self.funnel)
         self.funnel = None
+        if not isinstance(self.feature_flags, int):
+                self.feature_flags = 0
         self.feature_flags &= ~WORKSPACE_FLAGS.FUNNEL
 
     def enable_schedule(self):
         if not self.schedule:
             self.schedule = WorkspaceSchedule(workspace=self)
             db.session.add(self.schedule)
+            if not isinstance(self.feature_flags, int):
+                self.feature_flags = 0
         self.feature_flags |= WORKSPACE_FLAGS.SCHEDULE
 
     def disable_schedule(self):
         if self.schedule:
             db.session.delete(self.schedule)
         self.schedule = None
+        if not isinstance(self.feature_flags, int):
+            self.feature_flags = 0
         self.feature_flags &= ~WORKSPACE_FLAGS.SCHEDULE
 
     def enable_forum(self):
         if not self.forum:
             self.forum = WorkspaceForum(workspace=self)
             db.session.add(self.forum)
+            if not isinstance(self.feature_flags, int):
+                self.feature_flags = 0
         self.feature_flags |= ~WORKSPACE_FLAGS.FORUM
 
     def disable_forum(self):
         if self.forum:
             db.session.delete(self.forum)
+            if not isinstance(self.feature_flags, int):
+                self.feature_flags = 0
         self.forum = None
         self.feature_flags &= ~WORKSPACE_FLAGS.FORUM
 
-    def permissions(self, user, inherited=None):
-        perms = super(Workspace, self).permissions(user, inherited)
-        return perms
+    def get_funnel(self):
+        if self.has_funnel:
+            return WorkspaceFunnel.query.filter_by(workspace=self).first()
+        return None
 
     def url_for(self, action='view'):
         if action == 'view':
-            return url_for('workspace', profile=self.profile.name, workspace=self.name)
+            return url_for('workspace_view', profile=self.profile.name, workspace=self.name)
 
 
 class WorkspaceFunnel(BaseMixin, db.Model):
@@ -123,10 +144,10 @@ class WorkspaceFunnel(BaseMixin, db.Model):
 class WorkspaceSchedule(BaseMixin, db.Model):
     __tablename__ = 'workspace_schedule'
     workspace_id = db.Column(None, db.ForeignKey('workspace.id'), nullable=False)
-    workspace = db.relationship(Workspace, backref=db.backref('schedule', cascade='all, delete-orphan'))
+    workspace = db.relationship(Workspace, backref=db.backref('schedule',  uselist=False, cascade='all, delete-orphan'))
 
 
 class WorkspaceForum(BaseMixin, db.Model):
     __tablename__ = 'workspace_forum'
     workspace_id = db.Column(None, db.ForeignKey('workspace.id'), nullable=False)
-    workspace = db.relationship(Workspace, backref=db.backref('forum', cascade='all, delete-orphan'))
+    workspace = db.relationship(Workspace, backref=db.backref('forum', uselist=False, cascade='all, delete-orphan'))

@@ -47,13 +47,13 @@
     </div>
     <h1>{{ proposal.title }}</h1>
     <p>
-      by <strong>{{ proposal.profile.fullname }}</strong>
-      {% if proposal.profile == proposal.speaker -%}
+      by <strong>{{ proposal.user.fullname }}</strong>
+      {% if proposal.is_speaking == 0 -%}
         (speaking)
       {%- else -%}
         (proposing)
       {%- endif %}
-      {% if proposal.profile == g.user.profile -%}
+      {% if proposal.user == g.user -%}
         <small>(that’s you! <a href="{{ proposal.url_for('edit') }}">Edit this</a>? <a href="{{ proposal.url_for('delete') }}">Delete this</a>?)</small>
       {%- endif %}
     </p>
@@ -78,15 +78,15 @@
   <div class="section bar">
     <dl class="bar">
       <dt>Section</dt>
-      <dd>{{ proposal.section.title }}</dd>
-      <dt>Session type</dt>
+      <dd>{{ proposal.title }}</dd>
+      {#<dt>Session type</dt>
       <dd>{{ proposal.session_type }}</dd>
       <dt>Technical level</dt>
-      <dd>{{ proposal.technical_level }}</dd>
+      <dd>{{ proposal.technical_level }}</dd>#}
     </dl>
   </div>
   <div class="section">
-    {%- if not proposal.speaker -%}
+    {%- if proposal.is_speaking == 0-%}
       <p>
         <em>This is a proposal requesting for someone to speak on this topic.
         If you’d like to speak, leave a comment.</em>
@@ -94,8 +94,6 @@
     {%- endif -%}
     <h2> Description </h2>
       {{ proposal.description | markdown |safe }}
-    <h2> Speaker Bio </h2>
-      {{ proposal.bio | markdown |safe }}
   </div>
   <div class="section">
     <h2 id="comments">Comments</h2>

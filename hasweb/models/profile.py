@@ -35,7 +35,7 @@ class Profile(BaseNameMixin, db.Model):
     def permissions(self, user, inherited=None):
         perms = super(Profile, self).permissions(user, inherited)
         perms.add('view')
-        if user and self.userid in user.user_organizations_owned_ids():
+        if user and self.userid in user.user_organizations_owned_ids() or self.userid in user.user_organization_memberof_ids():
             perms.add('edit')
             perms.add('delete')
             perms.add('new')

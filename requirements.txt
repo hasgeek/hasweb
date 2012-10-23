@@ -5,3 +5,4 @@ Flask-SQLAlchemy
 https://github.com/hasgeek/flask-lastuser/zipball/master
 Flask-FlatPages
 Flask-commentease
+markdown

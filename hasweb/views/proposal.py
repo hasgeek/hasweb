@@ -13,18 +13,18 @@ from hasweb import app
 from hasweb.models import Profile, db, commentease
 from hasweb.views.login import lastuser
 from hasweb.models.workspace import Workspace, WorkspaceFunnel
-from hasweb.models.funnel import Proposal
+from hasweb.models.funnel import Proposal, proposal_status
 from hasweb.forms.workspace import ProposalForm, FunnelSectionForm, ConfirmSessionForm
 from hasweb.forms.comments import DeleteCommentForm
 
 markdown = Markdown(safe_mode="escape").convert
 
 
-@app.route('/<profile>/<workspace>/funnel/new', methods=['GET', 'POST'], endpoint='funnel')
+@app.route('/<profile>/<workspace>/funnel/new', methods=['GET', 'POST'])
 @lastuser.requires_login
 @load_models(
     (Profile, {'name': 'profile'}, 'profile'),
-    (Workspace, {'name': 'workspace', 'profile': 'profile'}, 'workspace')
+    (Workspace, {'name': 'workspace', 'profile': 'profile'}, 'workspace'), permission='new'
     )
 def funnel_new(profile, workspace):
     if not (workspace.has_funnel and workspace.funnel.is_open()):
@@ -33,9 +33,10 @@ def funnel_new(profile, workspace):
     if request.method == "GET":
         form.description.data = workspace.funnel.proposal_template
     if form.validate_on_submit():
-        proposal = Proposal(funnel=workspace.funnel)
+        proposal = Proposal(workspace_funnel=workspace.get_funnel())
         proposal.user = g.user
         form.populate_obj(proposal)
+        proposal.description_html = markdown(proposal.description)
         if not proposal.name:
             proposal.make_name()
         proposal.make_id()
@@ -48,7 +49,7 @@ def funnel_new(profile, workspace):
         cancel_url=workspace.url_for(), ajax=True)
 
 
-@app.route('/<profile>/<workspace>/funnel/<proposal>', methods=['POST', 'GET'], endpoint='proposal')
+@app.route('/<profile>/<workspace>/funnel/<proposal>', methods=['POST', 'GET'])
 @load_models(
     (Profile, {'name': 'profile'}, 'profile'),
     (Workspace, {'name': 'workspace', 'profile': 'profile'}, 'workspace'),
@@ -108,7 +109,7 @@ def funnel_view(profile, workspace, proposal):
         breadcrumbs=[(proposal.url_for(), workspace.title)], confirmform=confirmform)
 
 
-@app.route('/<profile>/<workspace>/funnel/<proposal>/edit', methods=['POST', 'GET'], endpoint='edit_proposal')
+@app.route('/<profile>/<workspace>/funnel/<proposal>/edit', methods=['POST', 'GET'])
 @lastuser.requires_login
 @load_models(
     (Profile, {'name': 'profile'}, 'profile'),
@@ -116,14 +117,16 @@ def funnel_view(profile, workspace, proposal):
     (Proposal, {'url_name': 'proposal'}, 'proposal'), permission='view'
 )
 def funnel_edit(profile, workspace, proposal):
-    if proposal.profile.userid != g.user.userid:
+    if proposal.user.userid != g.user.userid:
         abort(403)
     form = ProposalForm(obj=proposal)
     workspace_funnel = WorkspaceFunnel.query.filter_by(workspace=workspace).first()
-    form.section_id.choices = [(item.id, item.name) for item in FunnelSpaceSection.query.filter_by(workspace_funnel=workspace_funnel, public=True).order_by('title')]
     if request.method == 'GET':
-        form.is_speaking.data = proposal.profile == g.user.profile
-        form.email.data = g.user.email
+        form.description.data = workspace_funnel.proposal_template
+        form.is_speaking.choices = [
+            (1, u"I will be speaking"),
+            (0, u"I’m proposing a topic for someone to speak on")]
+        form.status.choices = [(type, proposal_status[type]) for type in proposal_status]
     if form.validate_on_submit():
         form.populate_obj(proposal)
         if not proposal.name:
@@ -135,7 +138,7 @@ def funnel_edit(profile, workspace, proposal):
         cancel_url=workspace.url_for(), ajax=True)
 
 
-@app.route('/<profile>/<workspace>/funnel/<proposal>/delete', methods=['POST', 'GET'], endpoint='delete_proposal')
+@app.route('/<profile>/<workspace>/funnel/<proposal>/delete', methods=['POST', 'GET'])
 @lastuser.requires_login
 @load_models(
     (Profile, {'name': 'profile'}, 'profile'),
