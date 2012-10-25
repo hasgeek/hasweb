@@ -35,6 +35,7 @@ class Proposal(BaseScopedIdNameMixin, VotingMixin, CommentingMixin, db.Model):
     description_format = db.Column(db.Unicode(20), default=u'html', nullable=False)
     description_html = db.Column(db.UnicodeText, default=u"", nullable=False)
     is_speaking = db.Column(db.Integer, default=True, nullable=False)
+    confirmed = db.Column(db.Boolean, default=False, nullable=False)
     status = db.Column(db.Integer, default=PROPOSAL_STATUS.DRAFT, nullable=False)
 
     __table_args__ = (db.UniqueConstraint('url_id', "workspace_funnel_id"),)
@@ -61,6 +62,8 @@ class Proposal(BaseScopedIdNameMixin, VotingMixin, CommentingMixin, db.Model):
             return url_for('funnel_edit', profile=workspace.profile.name, workspace=workspace.name, proposal=self.url_name)
         elif action == 'delete':
             return url_for('funnel_delete', profile=workspace.profile.name, workspace=workspace.name, proposal=self.url_name)
+        elif action == 'action':
+            return url_for('funnel_action', profile=workspace.profile.name, workspace=workspace.name, proposal=self.url_name)
 
         # Redo these:
         elif action == 'cancelsessionvote':

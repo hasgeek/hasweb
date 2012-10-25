@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from flask import url_for
-from . import db, BaseMixin, BaseScopedNameMixin, VotingMixin, CommentingMixin
+from . import db, BaseMixin, BaseScopedNameMixin
 from .profile import Profile
-from hasweb.models import commentease
+from hasweb.models.venue import VenueCampus
 
 
 __all__ = ['Workspace', 'WorkspaceFunnel', 'WorkspaceSchedule', 'WORKSPACE_FLAGS']
@@ -146,8 +146,18 @@ class WorkspaceSchedule(BaseMixin, db.Model):
     workspace_id = db.Column(None, db.ForeignKey('workspace.id'), nullable=False)
     workspace = db.relationship(Workspace, backref=db.backref('schedule',  uselist=False, cascade='all, delete-orphan'))
 
+    status = db.Column(db.Integer, default=FUNNEL_STATUS.DRAFT, nullable=False)
+
 
 class WorkspaceForum(BaseMixin, db.Model):
     __tablename__ = 'workspace_forum'
     workspace_id = db.Column(None, db.ForeignKey('workspace.id'), nullable=False)
     workspace = db.relationship(Workspace, backref=db.backref('forum', uselist=False, cascade='all, delete-orphan'))
+
+
+class WorkspaceVenueCampus(BaseMixin, db.Model):
+    __tablename__ = 'workspace_venue_campus'
+    workspace_id = db.Column(None, db.ForeignKey('workspace.id'), nullable=False)
+    workspace = db.relationship(Workspace, backref=db.backref('workspace_venue_campus', uselist=False, cascade='all, delete-orphan'))
+    campus_id = db.Column(None, db.ForeignKey('venue_campus.id'), nullable=False)
+    campus = db.relationship(VenueCampus, backref=db.backref('rooms', cascade='all, delete-orphan'))

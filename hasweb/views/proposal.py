@@ -4,7 +4,7 @@ from datetime import datetime
 from markdown import Markdown
 
 from flask import render_template, abort, flash, g, request, redirect
-from flask.ext.commentease import CommentForm
+from flask.ext.commentease import CommentForm, CsrfForm
 
 from coaster.views import load_models
 from baseframe.forms import render_form, render_redirect, render_delete_sqla
@@ -13,7 +13,7 @@ from hasweb import app
 from hasweb.models import Profile, db, commentease
 from hasweb.views.login import lastuser
 from hasweb.models.workspace import Workspace, WorkspaceFunnel
-from hasweb.models.funnel import Proposal, proposal_status
+from hasweb.models.funnel import Proposal
 from hasweb.forms.workspace import ProposalForm, FunnelSectionForm, ConfirmSessionForm
 from hasweb.forms.comments import DeleteCommentForm
 
@@ -105,7 +105,7 @@ def funnel_view(profile, workspace, proposal):
             return render_redirect(proposal.url_for(), code=303)
     confirmform = ConfirmSessionForm()
     return render_template('proposal.html', workspace=workspace, proposal=proposal,
-        comments=comments, commentform=commentform, delcommentform=delcommentform,
+        comments=comments, commentform=commentform, delcommentform=delcommentform, csrfform=CsrfForm(),
         breadcrumbs=[(proposal.url_for(), workspace.title)], confirmform=confirmform)
 
 
@@ -167,6 +167,18 @@ def confirm_session(profile, workspace, proposal):
     return redirect(proposal.url_for())
 
 
+@app.route('/<profile>/<workspace>/funnel/<proposal>/action', methods=['GET', 'POST'])
+@lastuser.requires_login
+@load_models(
+    (Profile, {'name': 'profile'}, 'profile'),
+    (Workspace, {'name': 'workspace', 'profile': 'profile'}, 'workspace'),
+    (Proposal, {'url_name': 'proposal'}, 'proposal')
+)
+def funnel_action(profile, workspace, proposal):
+    print commentease.vote_action(proposal.votes)
+    return "Done"
+
+
 @app.route('/<profile>/<workspace>/funnel/<proposal>/cancelvote', endpoint='cancelsessionvote')
 @lastuser.requires_login
 @load_models(
@@ -214,6 +226,7 @@ def votedownsession(profile, workspace, proposal):
 
 
 # Route for sections in proposal
+"""
 @app.route('/<profile>/<workspace>/section/new', methods=['GET', 'POST'])
 @lastuser.requires_login
 @load_models(
@@ -236,3 +249,4 @@ def section_new(profile, workspace):
         return render_redirect(workspace.url_for(), code=303)
     return render_form(form=form, title="Create New Section", submit=u"Save",
         cancel_url=profile.url_for(), ajax=True)
+"""

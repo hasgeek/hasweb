@@ -25,14 +25,14 @@
       <div class="choices">
 
         {%- if not vote %}
-          <a class="votechoice" title="Vote up" href="{{ proposal.url_for('voteupsession') }}">+1</a>
-          <a class="votechoice" title="Vote down" href="{{ proposal.url_for('votedownsession') }}">-1</a>
+          <a class="votechoice" data-action="vote" title="Vote up" href="{{ proposal.url_for('voteupsession') }}">+1</a>
+          <a class="votechoice" data-action="votedown" title="Vote down" href="{{ proposal.url_for('votedownsession') }}">-1</a>
         {%- elif vote.votedown %}
-          <a class="votechoice" title="Vote up" href="{{ proposal.url_for('voteupsession') }}">+1</a>
-          <a class="votechoice selected" title="Withdraw vote" href="{{ proposal.url_for('cancelsessionvote') }}">-1</a>
+          <a class="votechoice" data-action="vote" title="Vote up" href="{{ proposal.url_for('voteupsession') }}">+1</a>
+          <a class="votechoice data-action="votedown" selected" title="Withdraw vote" href="{{ proposal.url_for('cancelsessionvote') }}">-1</a>
         {%- else %}
-          <a class="votechoice selected" title="Withdraw vote" href="{{ proposal.url_for('cancelsessionvote') }}">+1</a>
-          <a class="votechoice" title="Vote down" href="{{ proposal.url_for('votedownsession') }}">-1</a>
+          <a class="votechoice selected" data-action="vote" title="Withdraw vote" href="{{ proposal.url_for('cancelsessionvote') }}">+1</a>
+          <a class="votechoice" data-action="votedown" title="Vote down" href="{{ proposal.url_for('votedownsession') }}">-1</a>
         {% endif %}
         <span class="indicator">&rarr;</span>
         <span class="score">
@@ -152,6 +152,20 @@
     {%- endif %}
   });
 </script>
+<!--
+{% if g.user %}
+  <script type="text/javascript">
+    $(function() {
+      var action = function(url, data, type)
+      $(".votechoice").on('click', 'a', function() {
+        event.preventDefault();
+
+      });
+    });
+  </script>
+{% endif %}
+Work in progress
+-->
 <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 {% endblock %}
