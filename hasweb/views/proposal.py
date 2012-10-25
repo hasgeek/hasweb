@@ -167,6 +167,7 @@ def confirm_session(profile, workspace, proposal):
     return redirect(proposal.url_for())
 
 
+"""
 @app.route('/<profile>/<workspace>/funnel/<proposal>/action', methods=['GET', 'POST'])
 @lastuser.requires_login
 @load_models(
@@ -175,8 +176,8 @@ def confirm_session(profile, workspace, proposal):
     (Proposal, {'url_name': 'proposal'}, 'proposal')
 )
 def funnel_action(profile, workspace, proposal):
-    print commentease.vote_action(proposal.votes)
-    return "Done"
+    pass
+"""
 
 
 @app.route('/<profile>/<workspace>/funnel/<proposal>/cancelvote', endpoint='cancelsessionvote')
