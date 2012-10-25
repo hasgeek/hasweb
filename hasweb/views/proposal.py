@@ -123,10 +123,6 @@ def funnel_edit(profile, workspace, proposal):
     workspace_funnel = WorkspaceFunnel.query.filter_by(workspace=workspace).first()
     if request.method == 'GET':
         form.description.data = workspace_funnel.proposal_template
-        form.is_speaking.choices = [
-            (1, u"I will be speaking"),
-            (0, u"I’m proposing a topic for someone to speak on")]
-        form.status.choices = [(type, proposal_status[type]) for type in proposal_status]
     if form.validate_on_submit():
         form.populate_obj(proposal)
         if not proposal.name:
