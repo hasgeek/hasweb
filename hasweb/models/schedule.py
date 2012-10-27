@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from . import db, BaseMixin
-from .workspace import WorkspaceSchedule, WorkspaceFunnel
+from .workspace import WorkspaceSchedule
+from .user import User
 from .funnel import Proposal
 from datetime import datetime
 from .venue import VenueCampus
@@ -15,13 +16,15 @@ class Schedule(BaseMixin, db.Model):
 
     workspace_schedule_id = db.Column(None, db.ForeignKey('workspace_schedule.id'), nullable=False)
     workspace_schedule = db.relationship(WorkspaceSchedule,
-        backref=db.backref('proposals', cascade='all, delete-orphan'))
+        backref=db.backref('session', cascade='all, delete-orphan'))
     parent = db.synonym('workspace_schedule')
+
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user = db.relationship(User)
+    parent = db.synonym('user')
+
     venue_campus_id = db.Column(None, db.ForeignKey('venue_campus.id'), nullable=False)
     venue_campus = db.relationship(VenueCampus)
-    workspace_funnel_id = db.Column(None, db.ForeignKey('workspace_funnel.id'), nullable=False)
-    workspace_funnel = db.relationship(WorkspaceFunnel,
-        backref=db.backref('workspace_funnels', cascade='all, delete-orphan'))
     proposal_id = db.Column(None, db.ForeignKey('proposal.id'), nullable=False)
     proposal = db.relationship(Proposal,
         backref=db.backref('schdeule_proposals', cascade='all, delete-orphan'))
