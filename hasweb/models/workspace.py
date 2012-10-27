@@ -160,4 +160,4 @@ class WorkspaceVenueCampus(BaseMixin, db.Model):
     workspace_id = db.Column(None, db.ForeignKey('workspace.id'), nullable=False)
     workspace = db.relationship(Workspace, backref=db.backref('workspace_venue_campus', uselist=False, cascade='all, delete-orphan'))
     campus_id = db.Column(None, db.ForeignKey('venue_campus.id'), nullable=False)
-    campus = db.relationship(VenueCampus, backref=db.backref('rooms', cascade='all, delete-orphan'))
+    campus = db.relationship(VenueCampus, backref=db.backref('campus_rooms', cascade='all, delete-orphan'))
