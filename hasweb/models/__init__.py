@@ -23,3 +23,4 @@ from hasweb.models.forum import *
 from hasweb.models.venue import *
 from hasweb.models.schedule import *
 from hasweb.models.venue import *
+from hasweb.models.session import *
