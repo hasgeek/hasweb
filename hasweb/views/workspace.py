@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from flask import render_template, abort, flash, request, g
+from flask import render_template, abort, flash, request
 from coaster.views import load_models, load_model
 from baseframe.forms import render_form, render_redirect, render_delete_sqla
 from hasweb import app
