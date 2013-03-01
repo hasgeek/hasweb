@@ -6,4 +6,4 @@ script:
   - nosetests --with-coverage
 notifications:
   email: false
-  irc: "irc.freenode.net#hasgeek"
+  irc: "irc.freenode.net#hasgeek-dev"
