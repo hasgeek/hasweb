@@ -15,7 +15,6 @@ dist/
 .webassets-cache
 nosetests.xml
 .sass-cache
-instance/settings.py
 instance/testing.py
 instance/production.py
 instance/development.py

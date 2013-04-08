@@ -1,25 +1,26 @@
 #page-header.masthead {
-  padding-top: 22px;
-  padding-bottom: 11px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .masthead {
   font-size: 30px;
-  line-height: 44px;
+  line-height: 40px;
 }
 .masthead img.logo {
   float: left;
 }
 .masthead p {
-  margin-bottom: 33px;
+  margin-bottom: 30px;
   font-size: 19px;
-  line-height: 33px;
+  line-height: 30px;
 }
 .masthead p.primary {
   margin-left: 200px;
   font-size: 30px;
-  line-height: 44px;
+  line-height: 40px;
   margin-bottom: 0;
+  margin-top: 10px;
 }
 .masthead .s1 {
   color: #df5e0e;
