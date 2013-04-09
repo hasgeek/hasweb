@@ -47,7 +47,7 @@ def init_for(env):
     coaster.app.init_app(app, env)
     hasweb.models.db.init_app(app)
     lastuser.init_app(app)
-    lastuser.init_usermanager(UserManager(hasweb.models.db, hasweb.models.User))
+    lastuser.init_usermanager(UserManager(hasweb.models.db, hasweb.models.User, hasweb.models.Team))
 
 
 @app.template_filter('age')

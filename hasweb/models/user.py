@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 
 from flask import url_for
-from flask.ext.lastuser.sqlalchemy import UserBase
+from flask.ext.lastuser.sqlalchemy import UserBase, TeamBase
 from . import db
-from hasweb.models.profile import Profile
+from .profile import Profile
 
-__all__ = ['User']
+__all__ = ['User', 'Team']
 
 
-class User(db.Model, UserBase):
-    __tablename__ = 'user'
-
+class User(UserBase, db.Model):
     @property
     def profile_url(self):
         return url_for('profile', profile=self.username or self.userid)
@@ -23,3 +21,7 @@ class User(db.Model, UserBase):
     def profiles(self):
         return [self.profile] + Profile.query.filter(
             Profile.userid.in_(self.organizations_owned_ids())).order_by('title').all()
+
+
+class Team(TeamBase, db.Model):
+    pass
