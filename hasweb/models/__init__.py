@@ -17,9 +17,4 @@ commentease.init_db(db)
 
 from hasweb.models.user import *
 from hasweb.models.profile import *
-from hasweb.models.workspace import *
-from hasweb.models.funnel import *
-from hasweb.models.forum import *
-from hasweb.models.venue import *
-from hasweb.models.schedule import *
 from hasweb.models.venue import *
