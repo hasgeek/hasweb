@@ -1,8 +1,8 @@
-Flask
-https://github.com/hasgeek/coaster/zipball/master
-https://github.com/hasgeek/baseframe/zipball/master
-Flask-SQLAlchemy
-https://github.com/hasgeek/flask-lastuser/zipball/master
-Flask-FlatPages
-Flask-commentease
 markdown
+Flask
+Flask-SQLAlchemy
+Flask-FlatPages
+https://github.com/hasgeek/coaster/archive/master.zip#egg=coaster
+https://github.com/hasgeek/baseframe/archive/master.zip#egg=baseframe
+https://github.com/hasgeek/flask-lastuser/archive/master.zip#egg=Flask-Lastuser
+https://github.com/hasgeek/flask-commentease/archive/master.zip#egg=Flask-Commentease
