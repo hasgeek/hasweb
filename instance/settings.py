@@ -15,6 +15,7 @@ LASTUSER_SERVER = 'https://auth.hasgeek.com/'
 MAIL_FAIL_SILENTLY = False
 MAIL_SERVER = 'localhost'
 DEFAULT_MAIL_SENDER = ('HasGeek', 'bot@hasgeek.com')
+MAIL_DEFAULT_SENDER = DEFAULT_MAIL_SENDER  # For new versions of Flask-Mail
 #: Logging: recipients of error emails
 ADMINS = []
 #: Log file
