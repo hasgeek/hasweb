@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-import os
-os.environ['ENVIRONMENT'] = "development"
 from hasweb import app, init_for
 from hasweb.models import db
 init_for('dev')
