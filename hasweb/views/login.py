@@ -3,8 +3,8 @@
 from flask import g, Response, redirect, flash
 from coaster.views import get_next_url
 
-from hasweb import app, lastuser
-from hasweb.models import db, Profile, PROFILE_TYPE
+from .. import app, lastuser
+from ..models import db, Profile, PROFILE_TYPE
 
 
 @app.route('/login')

@@ -6,15 +6,9 @@ from coaster.sqlalchemy import (IdMixin, TimestampMixin, BaseMixin, BaseNameMixi
     BaseScopedNameMixin, BaseScopedIdNameMixin, make_name)
 from hasweb import app
 
-__all__ = ['db']
-
 db = SQLAlchemy(app)
+commentease = Commentease(db=db)
 
-#Make votes, comments using Commentease
-
-commentease = Commentease()
-commentease.init_db(db)
-
-from hasweb.models.user import *
-from hasweb.models.profile import *
-from hasweb.models.venue import *
+from .user import *
+from .profile import *
+from .venue import *

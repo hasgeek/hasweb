@@ -2,7 +2,7 @@
 
 import os.path
 from flask import render_template
-from hasweb import app, pages
+from .. import app, pages
 
 
 @app.route('/')

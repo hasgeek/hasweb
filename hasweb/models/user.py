@@ -9,6 +9,8 @@ __all__ = ['User', 'Team']
 
 
 class User(UserBase, db.Model):
+    __tablename__ = 'user'
+
     @property
     def profile_url(self):
         return url_for('profile', profile=self.username or self.userid)
@@ -24,4 +26,4 @@ class User(UserBase, db.Model):
 
 
 class Team(TeamBase, db.Model):
-    pass
+    __tablename__ = 'team'
