@@ -6,4 +6,4 @@ from coaster.sqlalchemy import IdMixin, TimestampMixin, BaseMixin, BaseNameMixin
 
 db = SQLAlchemy(app)
 
-from hasweb.models.user import *
+from .user import *

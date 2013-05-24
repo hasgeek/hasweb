@@ -1,15 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from flask import Response, redirect, flash
-from flask.ext.lastuser import LastUser
-from flask.ext.lastuser.sqlalchemy import UserManager
 from coaster.views import get_next_url
 
-from hasweb import app
-from hasweb.models import db, User
-
-lastuser = LastUser(app)
-lastuser.init_usermanager(UserManager(db, User))
+from .. import app, lastuser
+from ..models import db
 
 
 @app.route('/login')
