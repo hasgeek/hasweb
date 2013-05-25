@@ -22,25 +22,62 @@
 {% block headline %}{% endblock %}
 {% block content %}
   <div class="row">
-    <div class="span4 masthead">
-      <p class="tertiary">
+    <div class="span6 masthead">
+      <p>
         We operate a popular <a href="http://jobs.hasgeek.com/">job board</a>,
         hang out in an <a href="irc://irc.freenode.net/#hasgeek">IRC channel</a>, and
         publish our <a href="https://github.com/hasgeek">code</a>.
         We arrange <a href="http://geekup.in/">geekups</a> with visiting geeks
         and host a <a href="http://beta.hacknight.in/">hacknight</a> every month.
       </p>
+    </div>
+    <div class="span6 masthead">
       <p>
+        Our activities reach thousands of developers every month.
         <a href="http://funnel.hasgeek.com/">Speak at our events</a>,
         or <a href="http://eepurl.com/duGmH">sign up to be notified</a> when we do one.
+        <strong>New:</strong> Our videos are on <a href="http://hasgeek.tv/"><strong>HasGeek TV</strong></a>.
+        Coming up:
       </p>
     </div>
-    <div class="span8 masthead">
-      <p class="tertiary">
-        New: Our videos are on <a href="http://hasgeek.tv/"><strong>HasGeek TV</strong></a>.
-        Coming up: <a href="http://advancedpython.hasgeek.com/"><strong>Advanced Python workshop</strong></a> (May 24-26), <a href="http://hacknight.in/thejulialang/julia-hacknight"><strong>Julia hacknight</strong></a> (May 25-26) and <a href="http://funnel.hasgeek.com/fifthel2013/"><strong>The Fifth Elephant 2013</strong></a> (July 11-13).
-      </p>
-      <p class="tertiary">
+  </div>
+  <ul class="cardset row">
+    {%- for etitle, edate, eurl, edesc in [
+        ('Advanced Python workshop', 'Fri, May 24 - Sun, May 26, Bangalore', 'http://advancedpython.hasgeek.com/',
+          'A three day workshop on Python for intermediate to advanced developers.'),
+        ('Julia hacknight', 'Sat, May 25, Bangalore', 'http://hacknight.in/thejulialang/julia-hacknight',
+          'Learn and hack Julia, a lightning fast programming language for technical computing.'),
+        ('Geekup with Jacob Appelbaum', 'Tue, May 28, Bangalore', 'http://geekup.in/2013/ioerror',
+          'Meet Jacob "ioerror" Appelbaum, Tor developer and Wikileaks activist.'),
+        ('Hadoop, MapReduce and friends', 'Sat, Jun 8 - Sun, Jun 9, Bangalore', 'http://hacknight.in/fifthelephant/2013-hadoop',
+          'A night of setting up Hadoop and writing MapReduce apps for it.'),
+        ('Data visualization hacknight', 'Sat, Jun 29 - Sun, Jun 30, Bangalore', 'http://hacknight.in/fifthelephant/2013-visualization',
+          'Tutorials and hacknight on big data visualization.'),
+        ('The Fifth Elephant 2013', 'Thu, Jul 11 - Sat, Jul 13, Bangalore', 'http://fifthelephant.in/2013/',
+          'The Fifth Elephant is our annual conference on big data and cloud computing, for developers and businesses.'),
+        ('JSFoo 2013', 'Fri, Sep 20 - Sat, Sep 21, Bangalore', 'http://jsfoo.in/',
+          'The annual JavaScript conference (website update pending).'),
+        ('Droidcon India 2013', 'Thu, Nov 28 - Sat, Nov 30, Bangalore', 'http://droidcon.in/',
+          'India’s only international Android developer conference.'),
+        ('Meta Refresh 2014', 'Fri, Feb 21 - Sat, Feb 22, Bangalore', 'http://metarefresh.in/2014',
+          'Next year’s edition of India’s only front-end and web design conference.')
+        ] %}
+      <li class="span4">
+        <a href="{{ eurl }}">
+          <div class="card-title">
+            <h2>{{ etitle }}</h2>
+            <h3>{{ edate }}</h3>
+          </div>
+          <div class="card-body">
+            {{ edesc }}
+          </div>
+        </a>
+      </li>
+    {%- endfor %}
+  </ul>
+  <div class="row">
+    <div class="span12 masthead">
+      <p>
         Previously:
         <a href="http://gitworkshop.hasgeek.com/">Git workshop</a>,
         <a href="http://pigworkshop.fifthelephant.in/">Pig workshop</a>,
