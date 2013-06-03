@@ -7,7 +7,8 @@
 {% block headerbox %}
   <header>
     {{ networkbar(siteid=config['SITE_ID'], login=false) }}
-
+    
+  <!-- memorial -->
     <div class="container">
       <div class="contentWrap">
         <div class="featureBorder">
@@ -16,13 +17,13 @@
             </a>
           </div>
         </div>
-
         <img class="photo-mob" src="{{ url_for('static', filename='img/Atul_chitnis.jpg') }}" alt="HasGeek logo" class="logo" width="150" height="250" />
         <h1>Atul Chitnis</h1>
         <h4>( 1962 - 2013 )</h4>
       </div>
-    <hr />
+      <hr />
     </div>
+  <!-- /memorial -->
 
     <div id="page-header" class="container masthead">
       <img src="{{ url_for('static', filename='img/hg-banner.png') }}" alt="HasGeek logo" class="logo" width="185" height="139" />
