@@ -213,6 +213,10 @@ footer .container {
   display: none;
 }
 
+h1.feature {
+  color: #222;
+}
+
 @media screen and (max-width: 480px) {
   .featureBorder {
     display: none;
