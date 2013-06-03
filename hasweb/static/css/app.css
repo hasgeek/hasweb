@@ -178,6 +178,7 @@ footer .container {
   margin: 0 auto;
   position: relative;
   width: 360px;
+  display: block;
   margin-top: 70px;
 }
 
@@ -193,7 +194,12 @@ footer .container {
 }
 
 .featureContent {
-  background: url("../img/Atul_chitnis.jpg") no-repeat scroll 0 0/100% auto #f03838;
+  background-image: url("../img/Atul_chitnis.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0 0;
+  background-size: 100%;
+  background-color: #FFFFFF;
   border: 1px solid #d5d5d5;
   box-shadow: 0 0 8px rgba(50, 50, 50, 0.3) inset;
   height: 386px;

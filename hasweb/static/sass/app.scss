@@ -96,6 +96,7 @@ $body-line-height: 20px;
     margin: 0 auto;
     position: relative;
     width: 360px;
+    display: block;
     margin-top: 70px;
 }
 .featureInner {
@@ -109,7 +110,12 @@ $body-line-height: 20px;
     width: 328px;
 }
 .featureContent {
-    background: url("../img/Atul_chitnis.jpg") no-repeat scroll 0 0 / 100% auto #F03838;
+    background-image: url("../img/Atul_chitnis.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 0 0;
+    background-size: 100%;
+    background-color: #FFFFFF;
     border: 1px solid #D5D5D5;
     box-shadow: 0 0 8px rgba(50, 50, 50, 0.3) inset;
     height: 386px;
@@ -118,6 +124,8 @@ $body-line-height: 20px;
     top: 16px;
     width: 297px;
 }
+
+
 .photo-mob{
     display: none;
 }
