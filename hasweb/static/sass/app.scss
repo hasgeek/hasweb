@@ -118,9 +118,14 @@ $body-line-height: 20px;
     top: 16px;
     width: 297px;
 }
-.photo-mob{
+.photo-mob {
     display: none;
 }
+
+h1.feature {
+    color: #222;
+}
+
 @media screen and (max-width: 480px) {
     .featureBorder{
         display: none;    

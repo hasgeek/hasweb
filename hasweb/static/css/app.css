@@ -194,7 +194,7 @@ footer .container {
 
 .featureContent {
   background: url("../img/Atul_chitnis.jpg") no-repeat scroll 0 0/100% auto #f03838;
-  border: 1px solid #d5d5d5;
+  border: 1px solid #D5D5D5;
   box-shadow: 0 0 8px rgba(50, 50, 50, 0.3) inset;
   height: 386px;
   left: 15px;
@@ -207,6 +207,10 @@ footer .container {
   display: none;
 }
 
+h1.feature {
+  color: #222;
+}
+
 @media screen and (max-width: 480px) {
   .featureBorder {
     display: none;
@@ -215,6 +219,6 @@ footer .container {
   .photo-mob {
     display: block;
     margin: 30px auto;
-    border: 10px solid #cccccc;
+    border: 10px solid #ccc;
   }
 }
