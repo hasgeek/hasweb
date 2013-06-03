@@ -4,6 +4,65 @@ $body-line-height: 20px;
     padding-top: $body-line-height;
     padding-bottom: $body-line-height / 2;
 }
+.contentWrap{
+    text-align: center;
+    h4{
+        font-size: 18px;
+        margin-bottom: 50px
+    }
+}
+.featureBorder {
+    background: linear-gradient(135deg, #F6F6F6 0px, #ECECEC 83%, #D5D5D5 100%) repeat scroll 0 0 transparent;
+    box-shadow: 2px 3px 7px #b5b5b5;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    width: 360px;
+    margin-top: 70px;
+}
+.featureInner {
+    background-color: #F4EFEA;
+    box-shadow: 5px 5px 12px rgba(50, 50, 50, 0.44) inset;
+    height: 418px;
+    left: 16px;
+    overflow: hidden;
+    position: absolute;
+    top: 16px;
+    width: 328px;
+}
+.featureShine {
+    border-bottom: 0 solid transparent;
+    border-right: 328px solid rgba(255, 255, 255, 0.08);
+    border-top: 418px solid transparent;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+.featureShine:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.featureContent {
+    background: url("../img/Atul_chitnis.jpg") no-repeat scroll 0 0 / 100% auto #F03838;
+    border: 1px solid #D5D5D5;
+    box-shadow: 0 0 8px rgba(50, 50, 50, 0.3) inset;
+    height: 386px;
+    left: 15px;
+    position: absolute;
+    top: 16px;
+    width: 297px;
+}
+.featureSpec {
+    color: #1E1E1E;
+    font-size: 0.625em;
+    left: 10px;
+    position: absolute;
+    top: 210px;
+}
+.featureSpec li:first-of-type {
+    font-weight: bold;
+}
 .masthead {
     font-size: 30px;
     line-height: $body-line-height * 2;
@@ -76,5 +135,18 @@ $body-line-height: 20px;
         p.primary {
             margin-left: 0;
         }
+    }
+}
+.photo-mob{
+    display: none;
+}
+@media screen and (max-width: 480px) {
+    .featureBorder{
+        display: none;    
+    }
+    .photo-mob{
+        display: block;
+        margin: 30px auto;
+        border: 10px solid #ccc;
     }
 }
