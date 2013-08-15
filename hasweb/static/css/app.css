@@ -8,7 +8,7 @@
   line-height: 40px;
 }
 .masthead img.logo {
-  float: left;
+  float: none;
 }
 .masthead p {
   margin-bottom: 30px;
@@ -16,7 +16,7 @@
   line-height: 30px;
 }
 .masthead p.primary {
-  margin-left: 200px;
+  margin-left: 0;
   font-size: 30px;
   line-height: 40px;
   margin-bottom: 0;
@@ -154,11 +154,31 @@ footer .container {
     text-align: left;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .masthead img.logo {
-    float: none;
+    float: left;
   }
   .masthead p.primary {
-    margin-left: 0;
+    margin-left: 200px;
+  }
+
+  #page-header.masthead {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+/******* Changes to be adapted to baseframe after bs3 migration ********/
+.cardset li .card-body, .userset li .card-body {
+  margin: 22px -14px 0;
+}
+
+/******* Changes to be omitted after upgrading networkbar to bs3 *******/
+#hg-bar .container {
+  margin: 0 15px 0 15px;
+}
+
+@media screen and (min-width: 768px) {
+  #hg-bar .container {
+    margin: auto;
   }
 }

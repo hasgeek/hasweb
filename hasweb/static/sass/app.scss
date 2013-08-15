@@ -3,13 +3,14 @@ $body-line-height: 20px;
 #page-header.masthead {
     padding-top: $body-line-height;
     padding-bottom: $body-line-height / 2;
+
 }
 
 .masthead {
     font-size: 30px;
     line-height: $body-line-height * 2;
     img.logo {
-        float: left;
+        float: none;
     }
     p {
         // margin-top: $body-line-height;
@@ -18,7 +19,7 @@ $body-line-height: 20px;
         line-height: $body-line-height * 1.5;
     }
     p.primary {
-        margin-left: 200px;
+        margin-left: 0;
         font-size: 30px;
         line-height: $body-line-height * 2;
         margin-bottom: 0;
@@ -69,13 +70,32 @@ $body-line-height: 20px;
 
 @import "footer";
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
     .masthead {
         img.logo {
-            float: none;
+            float: left;
         }
         p.primary {
-            margin-left: 0;
+            margin-left: 200px;
         }
+    }
+    #page-header.masthead{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+/******* Changes to be adapted to baseframe after bs3 migration ********/
+.cardset li .card-body, .userset li .card-body {
+    margin: 22px -14px 0;
+}
+
+/******* Changes to be omitted after upgrading networkbar to bs3 *******/
+#hg-bar .container{
+    margin: 0 15px 0 15px;
+}
+@media screen and (min-width: 768px){
+    #hg-bar .container{
+        margin: auto;
     }
 }

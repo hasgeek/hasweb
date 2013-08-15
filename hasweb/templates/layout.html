@@ -12,10 +12,10 @@
 
 {% block footer -%}
   <div class="row">
-    <div class="span1">
+    <div class="col-md-1">
       <img src="{{ url_for('static', filename='img/footer.png') }}" width="75" alt="HasGeek" />
     </div>
-    <div class="span6" id="legal">
+    <div class="col-md-5" id="legal">
       {#<ul class="link-list-line">
         <li><a href="{{ url_for('about') }}">About HasGeek</a></li>
         <li><a href="{{ url_for('sitepolicy', path='terms') }}">Terms &amp; Conditions</a></li>
@@ -26,7 +26,7 @@
         Copyright &copy; 2010-12 HasGeek Media LLP &mdash; All rights reserved
       </p>
     </div>
-    <div class="span5">
+    <div class="col-md-6">
       <p>
         Hosted by <a href="http://e2enetworks.com/">E2E Networks</a> and supported by
         the <a href="http://cis-india.org/">Centre for Internet and Society</a>.
