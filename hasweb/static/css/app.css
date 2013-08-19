@@ -1,3 +1,8 @@
+#page-header {
+  height: auto;
+  visibility: visible;
+}
+
 #page-header.masthead {
   padding-top: 20px;
   padding-bottom: 10px;
@@ -9,6 +14,7 @@
 }
 .masthead img.logo {
   float: none;
+  display: none;
 }
 .masthead p {
   margin-bottom: 30px;
@@ -17,10 +23,10 @@
 }
 .masthead p.primary {
   margin-left: 0;
-  font-size: 30px;
-  line-height: 40px;
-  margin-bottom: 0;
-  margin-top: 10px;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 .masthead .s1 {
   color: #df5e0e;
@@ -39,6 +45,11 @@
 }
 .masthead .s3 a {
   border-bottom-color: #f0a40c;
+}
+
+.grey-bg p {
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .widget-boxes {
@@ -157,9 +168,14 @@ footer .container {
 @media screen and (min-width: 768px) {
   .masthead img.logo {
     float: left;
+    display: block;
   }
   .masthead p.primary {
     margin-left: 200px;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-top: 10px;
   }
 
   #page-header.masthead {
