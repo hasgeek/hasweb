@@ -5,7 +5,7 @@
   <meta name="DC.title" content="{{ config['SITE_TITLE'] }}"/>
 {%- endblock %}
 {% block headerbox %}
-  <header>
+  <header id="home-header">
     {{ networkbar(siteid=config['SITE_ID'], login=false) }}
     <div id="page-header" class="container masthead col-md-12">
       <img src="{{ url_for('static', filename='img/hg-banner.png') }}" alt="HasGeek logo" class="logo" width="185" height="139" />

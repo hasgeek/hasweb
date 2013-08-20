@@ -1,9 +1,18 @@
 $body-line-height: 20px;
 
 #bs3-template{
-    #page-header{
-        height: auto;
-        visibility: visible;
+    #home-header{
+        #page-header{
+            height: auto;
+            visibility: visible;
+        }
+    }
+    .well{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    ol{
+        margin-left: 30px;
     }
 }
 #page-header.masthead {
@@ -20,9 +29,9 @@ $body-line-height: 20px;
     }
     p {
         // margin-top: $body-line-height;
-        margin-bottom: $body-line-height * 1.5;
-        font-size: 19px;
-        line-height: $body-line-height * 1.5;
+        margin-bottom: 22px;
+        font-size: 16px;
+        line-height: 22px;
     }
     p.primary {
         margin-left: 0;
@@ -50,11 +59,6 @@ $body-line-height: 20px;
         }
     }
 }
-.grey-bg p{
-    font-size: 16px;
-    line-height: 22px;
-}
-
 .widget-boxes {
     display: table;
     .widget {
@@ -86,6 +90,11 @@ $body-line-height: 20px;
             float: left;
             display: block;
         }
+        p {
+            margin-bottom: $body-line-height * 1.5;
+            font-size: 19px;
+            line-height: $body-line-height * 1.5;
+        }
         p.primary {
             margin-left: 200px;
             font-size: 30px;
@@ -99,10 +108,39 @@ $body-line-height: 20px;
         padding-right: 0px;
     }
 }
+@media screen and (min-width: 768px) and (max-width: 992px ) {
+    .masthead {
+        p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        p.primary {
+            font-size: 24px;
+            line-height: $body-line-height * 1.6;            
+            margin-top: 3px;
+        }
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px ) {
+    .masthead {
+        p {
+            margin-bottom: $body-line-height * 1.5;
+            font-size: 19px;
+            line-height: $body-line-height * 1.5;
+        }
+        p.primary {
+            font-size: 28px;
+            line-height: $body-line-height * 2;
+        }
+    }
+}
 
 /******* Changes to be adapted to baseframe after bs3 migration ********/
 .cardset li .card-body, .userset li .card-body {
     margin: 22px -14px 0;
+    font-size: 13px;
+    line-height: 20px;
 }
 
 /******* Changes to be omitted after upgrading networkbar to bs3 *******/
