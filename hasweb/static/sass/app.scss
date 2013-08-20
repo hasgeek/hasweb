@@ -1,13 +1,11 @@
 $body-line-height: 20px;
 
-.navbar-brand{
-    //background-color: red;
+#bs3-template{
+    #page-header{
+        height: auto;
+        visibility: visible;
+    }
 }
-#page-header{
-    height: auto;
-    visibility: visible;
-}
-
 #page-header.masthead {
     padding-top: $body-line-height;
     padding-bottom: $body-line-height / 2;
