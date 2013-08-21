@@ -2,6 +2,10 @@ $body-line-height: 20px;
 
 #bs3-template{
     #home-header{
+        &.container{
+            padding-left: 0;
+            padding-right: 0;
+        }
         #page-header{
             height: auto;
             visibility: visible;
@@ -85,6 +89,11 @@ $body-line-height: 20px;
 @import "footer";
 
 @media screen and (min-width: 768px) {
+    #home-header{
+        #page-header{
+            padding-bottom: 18px;
+        }
+    }
     .masthead {
         img.logo {
             float: left;
