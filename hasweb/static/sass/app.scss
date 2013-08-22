@@ -89,9 +89,15 @@ $body-line-height: 20px;
 @import "footer";
 
 @media screen and (min-width: 768px) {
-    #home-header{
-        #page-header{
-            padding-bottom: 18px;
+    #bs3-template{
+        #home-header{
+            &.container{           
+                padding-right: 15px;
+                padding-left: 15px;        
+            }
+            #page-header{
+                padding-bottom: 18px;
+            }
         }
     }
     .masthead {

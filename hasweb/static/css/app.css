@@ -172,7 +172,11 @@ footer .container {
   }
 }
 @media screen and (min-width: 768px) {
-  #home-header #page-header {
+  #bs3-template #home-header.container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  #bs3-template #home-header #page-header {
     padding-bottom: 18px;
   }
 
