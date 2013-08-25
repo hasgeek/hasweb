@@ -1,24 +1,17 @@
 $body-line-height: 20px;
 
-#bs3-template{
-    #home-header{
-        &.container{
-            padding-left: 0;
-            padding-right: 0;
-        }
-        #page-header{
-            height: auto;
-            visibility: visible;
-        }
+#home-header{
+    #page-header{
+        display: block;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
-    .well{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    ol{
-        margin-left: 30px;
+    &.container{           
+        padding-right: 0px;
+        padding-left: 0px;        
     }
 }
+
 #page-header.masthead {
     padding-top: $body-line-height;
     padding-bottom: $body-line-height / 2;
@@ -89,16 +82,17 @@ $body-line-height: 20px;
 @import "footer";
 
 @media screen and (min-width: 768px) {
-    #bs3-template{
-        #home-header{
-            &.container{           
-                padding-right: 15px;
-                padding-left: 15px;        
-            }
-            #page-header{
-                padding-bottom: 18px;
-            }
+
+    #home-header{
+        #page-header{
+            padding-bottom: 20px;
+            padding-top: 20px;
         }
+        &.container{           
+            padding-right: 15px;
+            padding-left: 15px;        
+        }
+
     }
     .masthead {
         img.logo {
@@ -148,22 +142,5 @@ $body-line-height: 20px;
             font-size: 28px;
             line-height: $body-line-height * 2;
         }
-    }
-}
-
-/******* Changes to be adapted to baseframe after bs3 migration ********/
-.cardset li .card-body, .userset li .card-body {
-    margin: 22px -14px 0;
-    font-size: 13px;
-    line-height: 20px;
-}
-
-/******* Changes to be omitted after upgrading networkbar to bs3 *******/
-#hg-bar .container{
-    margin: 0 15px 0 15px;
-}
-@media screen and (min-width: 768px){
-    #hg-bar .container{
-        margin: auto;
     }
 }

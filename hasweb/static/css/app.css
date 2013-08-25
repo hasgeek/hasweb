@@ -1,17 +1,11 @@
-#bs3-template #home-header.container {
-  padding-left: 0;
-  padding-right: 0;
+#home-header #page-header {
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
-#bs3-template #home-header #page-header {
-  height: auto;
-  visibility: visible;
-}
-#bs3-template .well {
-  padding-left: 0;
-  padding-right: 0;
-}
-#bs3-template ol {
-  margin-left: 30px;
+#home-header.container {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 #page-header.masthead {
@@ -172,12 +166,13 @@ footer .container {
   }
 }
 @media screen and (min-width: 768px) {
-  #bs3-template #home-header.container {
+  #home-header #page-header {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  #home-header.container {
     padding-right: 15px;
     padding-left: 15px;
-  }
-  #bs3-template #home-header #page-header {
-    padding-bottom: 18px;
   }
 
   .masthead img.logo {
@@ -223,22 +218,5 @@ footer .container {
   .masthead p.primary {
     font-size: 28px;
     line-height: 40px;
-  }
-}
-/******* Changes to be adapted to baseframe after bs3 migration ********/
-.cardset li .card-body, .userset li .card-body {
-  margin: 22px -14px 0;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-/******* Changes to be omitted after upgrading networkbar to bs3 *******/
-#hg-bar .container {
-  margin: 0 15px 0 15px;
-}
-
-@media screen and (min-width: 768px) {
-  #hg-bar .container {
-    margin: auto;
   }
 }
