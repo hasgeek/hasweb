@@ -23,7 +23,7 @@ from . import models, views
 
 def init_for(env):
     coaster.app.init_app(app, env)
-    baseframe.init_app(app, requires=['baseframe', 'hasweb'])
+    baseframe.init_app(app, requires=['baseframe-bs3', 'hasweb'])
     lastuser.init_app(app)
     lastuser.init_usermanager(UserManager(models.db, models.User))
     pages.init_app(app)
