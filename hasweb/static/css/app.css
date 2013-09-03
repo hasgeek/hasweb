@@ -14,7 +14,7 @@
   padding-bottom: 10px;
 }
 
-#main-content #home-content {
+#home-content {
   margin-top: -4em;
 }
 
@@ -181,7 +181,7 @@ footer .container {
     margin-top: 0;
   }
 
-  #main-content #home-content {
+  #home-content {
     margin-top: 0;
   }
 

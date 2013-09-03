@@ -16,13 +16,10 @@ $body-line-height: 20px;
 #page-header.masthead {
     padding-top: $body-line-height;
     padding-bottom: $body-line-height / 2;
-
 }
 
-#main-content{
-    #home-content{
-        margin-top: -4em;
-    }
+#home-content{
+    margin-top: -4em;
 }
 
 .masthead {
@@ -103,13 +100,9 @@ $body-line-height: 20px;
         }
 
     }
-
-    #main-content{
-        #home-content{
-            margin-top: 0;
-        }
+    #home-content{
+        margin-top: 0;
     }
-
     .masthead {
         img.logo {
             float: left;
