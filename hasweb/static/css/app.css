@@ -28,8 +28,8 @@
 }
 .masthead p {
   margin-bottom: 22px;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 25px;
 }
 .masthead p.primary {
   margin-left: 0;
@@ -192,6 +192,7 @@ footer .container {
   .masthead p {
     margin-bottom: 30px;
     font-size: 19px;
+    line-height: 22px;
     line-height: 30px;
   }
   .masthead p.primary {
