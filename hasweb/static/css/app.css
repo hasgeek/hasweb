@@ -1,3 +1,92 @@
+#root {
+  margin-bottom: -108px;
+}
+#root #root_footer {
+  height: 108px;
+}
+
+footer {
+  min-height: 98px;
+}
+footer .footer-inner {
+  min-height: 98px;
+}
+footer .container {
+  text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+  #root {
+    margin-bottom: -301px;
+  }
+  #root #root_footer {
+    height: 301px;
+  }
+
+  footer {
+    min-height: 291px;
+  }
+  footer .footer-inner {
+    min-height: 291px;
+  }
+  footer .container {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  #root {
+    margin-bottom: -257px;
+  }
+  #root #root_footer {
+    height: 257px;
+  }
+
+  footer {
+    min-height: 247px;
+  }
+  footer .footer-inner {
+    min-height: 247px;
+  }
+  footer .container {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  #root {
+    margin-bottom: -150px;
+  }
+  #root #root_footer {
+    height: 150px;
+  }
+
+  footer {
+    min-height: 140px;
+  }
+  footer .footer-inner {
+    min-height: 140px;
+  }
+  footer .container {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 980px) and (max-width: 1199px) {
+  #root {
+    margin-bottom: -128px;
+  }
+  #root #root_footer {
+    height: 128px;
+  }
+
+  footer {
+    min-height: 118px;
+  }
+  footer .footer-inner {
+    min-height: 118px;
+  }
+  footer .container {
+    text-align: left;
+  }
+}
 #home-header #page-header {
   display: block;
   padding-bottom: 10px;
@@ -28,8 +117,8 @@
 }
 .masthead p {
   margin-bottom: 22px;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 25px;
 }
 .masthead p.primary {
   margin-left: 0;
@@ -192,6 +281,7 @@ footer .container {
   .masthead p {
     margin-bottom: 30px;
     font-size: 19px;
+    line-height: 22px;
     line-height: 30px;
   }
   .masthead p.primary {

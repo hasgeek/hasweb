@@ -1,3 +1,6 @@
+@import "compass";
+@import "footer";
+
 $body-line-height: 20px;
 
 #home-header{
@@ -32,8 +35,8 @@ $body-line-height: 20px;
     p {
         // margin-top: $body-line-height;
         margin-bottom: 22px;
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 14px;
+        line-height: 25px;
     }
     p.primary {
         margin-left: 0;
@@ -111,6 +114,7 @@ $body-line-height: 20px;
         p {
             margin-bottom: $body-line-height * 1.5;
             font-size: 19px;
+            line-height: 22px;
             line-height: $body-line-height * 1.5;
         }
         p.primary {
