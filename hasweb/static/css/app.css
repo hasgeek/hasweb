@@ -6,6 +6,7 @@
 #home-header.container {
   padding-right: 0px;
   padding-left: 0px;
+  margin-top: 4.8em;
 }
 
 #page-header.masthead {
@@ -23,8 +24,8 @@
 }
 .masthead p {
   margin-bottom: 22px;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 25px;
 }
 .masthead p.primary {
   margin-left: 0;
@@ -173,6 +174,11 @@ footer .container {
   #home-header.container {
     padding-right: 15px;
     padding-left: 15px;
+    margin-top: 0;
+  }
+
+  #home-content {
+    margin-top: 0;
   }
 
   .masthead img.logo {
@@ -182,6 +188,7 @@ footer .container {
   .masthead p {
     margin-bottom: 30px;
     font-size: 19px;
+    line-height: 22px;
     line-height: 30px;
   }
   .masthead p.primary {

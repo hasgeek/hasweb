@@ -1,3 +1,5 @@
+@import "compass";
+
 $body-line-height: 20px;
 
 #home-header{
@@ -8,15 +10,16 @@ $body-line-height: 20px;
     }
     &.container{           
         padding-right: 0px;
-        padding-left: 0px;        
+        padding-left: 0px;  
+        margin-top: 4.8em;      
     }
 }
 
 #page-header.masthead {
     padding-top: $body-line-height;
     padding-bottom: $body-line-height / 2;
-
 }
+
 .masthead {
     font-size: 30px;
     line-height: $body-line-height * 2;
@@ -27,8 +30,8 @@ $body-line-height: 20px;
     p {
         // margin-top: $body-line-height;
         margin-bottom: 22px;
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 14px;
+        line-height: 25px;
     }
     p.primary {
         margin-left: 0;
@@ -90,9 +93,13 @@ $body-line-height: 20px;
         }
         &.container{           
             padding-right: 15px;
-            padding-left: 15px;        
+            padding-left: 15px; 
+            margin-top: 0;       
         }
 
+    }
+    #home-content{
+        margin-top: 0;
     }
     .masthead {
         img.logo {
@@ -102,6 +109,7 @@ $body-line-height: 20px;
         p {
             margin-bottom: $body-line-height * 1.5;
             font-size: 19px;
+            line-height: 22px;
             line-height: $body-line-height * 1.5;
         }
         p.primary {

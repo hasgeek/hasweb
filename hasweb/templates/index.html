@@ -23,10 +23,10 @@
 {% endblock %}
 {% block headline %}{% endblock %}
 {% block content %}
-  <div class="row">
+  <div class="row" id="home-content">
     <div class="col-md-6 masthead">
       <p>
-        We operate a popular <a href="https://jobs.hasgeek.com/">job board</a>,
+        We operate a popular <a href="https://hasjob.co/">job board</a>,
         hang out in an <a href="irc://irc.freenode.net/#hasgeek">IRC channel</a>, and
         publish our <a href="https://github.com/hasgeek">code</a>.
         We arrange <a href="https://geekup.in/">geekups</a> with visiting geeks
@@ -45,20 +45,10 @@
   </div>
   <ul class="cardset row">
     {%- for etitle, edate, eurl, edesc in [
-        ('Responsive Web Design workshop', 'Tue, Sep 3 - Wed, Sep 4, Bangalore', 'https://cssworkshop.metarefresh.in/',
-          'Two day hands-on workshop on understanding responsive web design and creating websites that work flawlessly on mobile, tablet and PC.'),
-        ('Node.js hacknight', 'Sat, Sep 7 - Sun, Sep 4, Pune', 'https://hacknight.in/jsfoo/2013-nodejs', 
-          'A night of coffee and hacks, with JavaScript and Node.js'),
-        ('JSFoo 2013', 'Fri, Sep 20 - Sat, Sep 21, Bangalore', 'https://jsfoo.in/',
-          'The annual JavaScript conference.'),
-        ('Git workshop', 'Sat, Sep 28 - Sun, Sep 29, Bangalore', 'https://gitworkshop.hasgeek.com/',
-          'A two-day hands-on workshop that teaches git from the basics all the way to advanced usage'),
-        ('Advanced Python workshop', 'Thu, Nov 7 - Sat, Nov 9, Bangalore', 'https://advancedpython.hasgeek.com/',
-          'A three-day intensive hands-on workshop that dives deep into the Python internals, advanced techniques and best practices'),
-        ('Droidcon India 2013', 'Thu, Nov 28 - Sat, Nov 30, Bangalore', 'https://droidcon.in/',
-          'India’s only international Android developer conference.'),
-        ('Meta Refresh 2014', 'Fri, Feb 21 - Sat, Feb 22, Bangalore', 'https://metarefresh.in/2014',
-          'Next year’s edition of India’s only front-end and web design conference.')
+        ('Font design for the next billion people', 'Fri, Oct 10, Bangalore', 'https://geekup.in/2014/google-fonts',
+          'Geekup with Dave Crossland and Pathum Egodawatta'),
+        ('Droidcon India', 'Fri, Dec 5 – Sat, Dec 6, Bangalore', 'https://droidcon.in/',
+          'On Android'),
         ] %}
       <li class="col-md-4 col-sm-6">
         <a href="{{ eurl }}">
@@ -77,11 +67,19 @@
     <div class="col-md-12 masthead">
       <p>
         Previously:
+        <a href="https://jsfoo.in/2014/">JSFoo 2014</a>,
+        <a href="https://fifthelephant.in/2014/">The Fifth Elephant 2014</a>,
+        <a href="https://rootconf.in/2014/">Rootconf 2014</a>,
+        <a href="https://funnel.hasgeek.com/redis-miniconf-2014">Redis Miniconf</a>,
+        <a href="https://metarefresh.in/2014/">Meta Refresh 2014</a>,
+        <a href="https://metarefresh.in/2014/angularjs-miniconf">AngularJS Miniconf</a>,
+        <a href="https://droidcon.in/2013/">Droidcon India 2013</a>,
+        <a href="https://jsfoo.in/2013/">JSFoo 2013</a>,
+        <a href="https://cssworkshop.metarefresh.in/">Responsive Web Design workshop</a>,
         <a href="http://hasgeektv.doattend.com/">HasGeek TV workshop</a>,
         <a href="https://advancedpython.hasgeek.com/">Advanced Python workshop</a>,
         <a href="https://gitworkshop.hasgeek.com/">Git workshop</a>,
         <a href="https://fifthelephant.in/2013/">The Fifth Elephant 2013</a>,
-        <a href="https://cssworkshop.metarefresh.in/">Responsive Design workshop</a>,
         <a href="https://pigworkshop.fifthelephant.in/">Pig workshop</a>,
         <a href="https://cssworkshop.metarefresh.in/2013-03/">CSS for the Soul</a>,
         <a href="https://metarefresh.in/2013/">Meta Refresh 2013</a>,
