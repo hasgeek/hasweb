@@ -52,10 +52,12 @@ We will not sell, distribute or lease your personal information to third parties
 
 If there are any questions regarding this privacy policy you may contact us at:
 
-HasGeek Media LLP  
-c/o The Centre for Internet and Society  
-No 194, 2<sup>nd</sup> ‘C’ Cross, 4<sup>th</sup> Main  
-Opposite Domlur Club, Domlur 2<sup>nd</sup> Stage  
-Bangalore - 560 071, India
 
-Email: <info@hasgeek.com>
+HasGeek Media LLP  
+\#2699, 19th Main, 5th Cross  
+Indiranagar HAL 2nd Stage  
+Bangalore - 560008  
+Karnataka, India  
+
+Email: <info@hasgeek.com>  
+Phone: +91 7676 33 2020
