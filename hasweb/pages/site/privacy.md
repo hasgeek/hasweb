@@ -54,10 +54,10 @@ If there are any questions regarding this privacy policy you may contact us at:
 
 
 HasGeek Media LLP  
-\#2699, HAL 2nd Stage  
-19th Main, 5th Cross  
-Indiranagar  
-Bengaluru - 560 008, Karnataka  
-India  
+\#2699, 19th Main, 5th Cross  
+Indiranagar HAL 2nd Stage  
+Bangalore - 560008  
+Karnataka, India  
 
-Email: <info@hasgeek.com>
+Email: <info@hasgeek.com>  
+Phone: +91 7676 33 2020
