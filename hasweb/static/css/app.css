@@ -148,19 +148,19 @@ footer .container {
     text-align: left;
   }
 }
-@media screen and (min-width: 980px) and (max-width: 1199px) {
+@media screen and (min-width: 980px) {
   #root {
-    margin-bottom: -128px;
+    margin-bottom: -133px;
   }
   #root #root_footer {
-    height: 128px;
+    height: 133px;
   }
 
   footer {
-    min-height: 118px;
+    min-height: 123px;
   }
   footer .footer-inner {
-    min-height: 118px;
+    min-height: 123px;
   }
   footer .container {
     text-align: left;

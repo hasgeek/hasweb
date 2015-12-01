@@ -19,4 +19,3 @@ We occasionally host a [Geekup](https://geekup.in/) with visitors to our office 
 We conduct [hacknights](https://hacknight.in/) alongside our events. Come to our events to meet like-minded people, learn new things, and discover new opportunities.
 
 [See what else is coming up in the Funnel](https://funnel.hasgeek.com). [Sign up to be notified when we do an event](http://eepurl.com/duGmH).
-

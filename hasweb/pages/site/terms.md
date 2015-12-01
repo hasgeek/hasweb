@@ -1,7 +1,7 @@
-title: Guidelines for Acceptable Use
+title: Terms & Conditions
 
 
-The use of this website is subject to the following HasGeek guidelines:
+Your use of this website is subject to the following guidelines:
 
 1. The content of the pages of this website is for your general information and use only. It is subject to change without notice.
 
