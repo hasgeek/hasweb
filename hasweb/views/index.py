@@ -19,4 +19,4 @@ def about(path):
 @app.route('/site/', defaults={'path': 'index'})
 @app.route('/site/<path:path>')
 def sitepolicy(path):
-    return render_template('site.html', page=pages.get_or_404(os.path.join('site', path)))
+    return render_template('about.html', page=pages.get_or_404(os.path.join('site', path)))
