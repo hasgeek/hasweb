@@ -6,6 +6,6 @@ Please see:
 2. [Disclaimer](disclaimer)
 3. [Acceptable Use Guidelines](terms)
 4. [Privacy Policy](privacy)
-5. [Job Board Terms of Service](jbtos)
+5. [Job Board Terms of Service](https://hasjob.co/tos)
 6. [Sponsorship Terms of Service](adtos)
 7. [Cancellation & Refund Policy](refunds)
