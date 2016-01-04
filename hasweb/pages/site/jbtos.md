@@ -1,6 +1,10 @@
 title: Job Board Terms of Service
 
-## You must agree to these terms to list a job on the Job Board.
+## You must agree to these terms before you list a paid job on the Job Board:
+
+Every paid job board listing is valid for a pre-specified period eg. 30 days. Fulfilment of a job board listing order occurs on such listing being published and remaining available on our Job Board site for a the specific period. Pricing for various categories of listings will be publicly available depending on the availability of such a service and available inventory.HasGeek reserves the right to consider refunding the purchase amount for such a listing. By issuing a submission to the job board, you acknowledge full awareness of that your purchase amount may not be refunded.
+
+## You must agree to these terms to list a job on the Job Board:
 
 I understand that my listing may be removed if it:
 
