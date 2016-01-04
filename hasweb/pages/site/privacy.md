@@ -1,10 +1,10 @@
-title: Privacy Policy
+## Privacy Policy
 
-This privacy policy sets out how HasGeek Media LLP (henceforth “HasGeek”, “us” or “we”) uses and protects any information that you give HasGeek when you use this website. HasGeek is committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement. HasGeek may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from June 1, 2012.
+This privacy policy sets out how HasGeek Learning Pvt. Ltd., (henceforth “HasGeek”, “us” or “we”) uses and protects any information that you give HasGeek when you use this website (henceforth “Hasjob“, “job board“, “services“). HasGeek is committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement. HasGeek may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from June 1, 2012.
 
 ## What we collect
 
-We may collect the following information:
+The information we collect from you are explicitly mentioned when you use the job board. It includes the following (but is not limited to):
 
 * Name, employer name and job title
 * Contact information including email addresses and phone numbers
@@ -13,12 +13,14 @@ We may collect the following information:
 
 ## What do we do with your information?
 
-We require the following information to understand your needs and serve you better:
+We collect information from you for the following purposes:
 
 * Internal record keeping.
 * We may use the information to improve our products and services.
 * We may periodically send promotional emails about new products, special offers or other information which we think you may find interesting using the email address you have provided.
 * From time to time, we may also use your information to contact you for market research purposes. We may contact you by email, phone or mail. We may use the information to customise the website according to your interests.
+
+We will not sell, distribute or lease your personal information to third parties unless we have your permission or are required by law to do so. We may use your personal information to send you promotional information about third parties which we think you may find interesting if you tell us that you wish this to happen.
 
 ## Security
 
@@ -34,6 +36,13 @@ Overall, cookies help us provide you with a better website, by enabling us to mo
 
 You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website as several aspects of it require cookies to function normally.
 
+## Third party services we use
+
+We use analytics tools and other third party technologies, such as Google Analytics, to collect non-personal information in the form of various usage and user metrics when you use our services. These tools and technologies collect and analyze certain types of information, including cookies, IP addresses, device and software identifiers, referring and exit URLs, onsite behavior and usage information, feature use metrics and statistics, usage and purchase history, MAC Address, mobile unique device ID, and other similar information.
+
+The third party analytics companies who collect information on our services and other online products and/or services may combine the information collected with other information they have independently collected from other websites and/or other online or mobile products and services relating to your activities across their network of websites as well as online and/or mobile products and services. Many of these companies collect and use information under their own privacy policies.
+you may opt out of Google Analytics by visiting the Google Analytics opt-out page.
+
 ## Links to other websites
 
 Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.
@@ -46,14 +55,12 @@ You may choose to restrict the collection or use of your personal information in
 
 * If you have previously agreed to us using your personal information for direct marketing purposes, you may change your mind at any time by writing to or emailing us at <support@hasgeek.com>.
 
-We will not sell, distribute or lease your personal information to third parties unless we have your permission or are required by law to do so. We may use your personal information to send you promotional information about third parties which we think you may find interesting if you tell us that you wish this to happen.
-
 ## Contacting us
 
 If there are any questions regarding this privacy policy you may contact us at:
 
 HasGeek Media LLP  
 No. 2699, 5th cross,
-19th main, Kodihalli
+19th main, Indiranagar
 Bangalore - 560008
-Email: <info@hasgeek.com>
+Email: <support@hasgeek.com>
