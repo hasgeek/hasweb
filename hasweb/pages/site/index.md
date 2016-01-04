@@ -2,10 +2,11 @@ title: Site Policy
 
 Please see:
 
-1. [Terms of Service](tos)
-2. [Disclaimer](disclaimer)
-3. [Acceptable Use Guidelines](terms)
-4. [Privacy Policy](privacy)
-5. [Job Board Terms of Service](jbtos)
-6. [Sponsorship Terms of Service](adtos)
-7. [Cancellation & Refund Policy](refunds)
+ToS == our terms to user defining what they're allowed and not allowed to do.
+We need global privacy policy and per-site ToS.
+
+1. [Terms of Service](hgtos)
+1. [Job Board Terms of Service](jbtos)
+1. [Sponsorship Terms of Service](adtos)
+1. [Privacy Policy](privacy)
+1. [Disclaimer](disclaimer)
