@@ -12,7 +12,7 @@ We may cancel an event due to unforeseen reasons or circumstances outside our co
 
 __Returns__
 If you are unhappy with the merchandise for any reason, you can return the item in an unused condition, no questions asked within 7 days of purchase either for an exchange or for a refund. 
-Return of merchandise for exchange of merchandise is subject to availability.
+Return of merchandise for exchange of merchandise is subject to availability. At the moment all our returns are in-person.
 
 _Refunds__
 
