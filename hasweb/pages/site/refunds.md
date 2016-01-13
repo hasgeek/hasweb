@@ -10,8 +10,6 @@ We may cancel an event due to unforeseen reasons or circumstances outside our co
 
 ## Merchendise
 
-If you are unhappy with the size, fit or overall make of the merchandise then you can always return the product to HasGeek and exchange it for another of the same product that suits your requirements. These products may have limited quantities ???.
-
-If you are unhappy with the merchandise, you can return the item, no questions asked within 7 days of purchase and a refund process will be initiated and the amount will be reflected back in bank account as per the payment gateway’s processing norms within 7 to 10 business days. Beyond 7 days, returns are validated on a case by case basis.
+If you are unhappy with the merchandise, you can return the item in an unused condition, no questions asked within 7 days of purchase either for an exchange or for a refund. Refund process will be initiated and the amount will be reflected back in bank account as per the payment gateway’s processing norms within 7 to 10 business days. Beyond 7 days, returns are validated on a case by case basis. Exchange of merchandise is subject to availability.
 
 
