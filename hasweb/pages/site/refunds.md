@@ -16,7 +16,7 @@ Return of merchandise for exchange of merchandise is subject to availability. At
 
 _Refunds__
 
-Upon receiving the item, a refund process will be initiated and the amount will be reflected back in to your bank account as per the payment gateway’s processing norms or within 7 to 10 business days. Beyond 7 days, returns are validated on a case by case basis. 
+Upon receiving the item, a refund process will be initiated and the amount will be reflected back in to your bank account as per the payment gateway’s processing norms or within 7 to 10 business days. Beyond 7 days, returns are subject to HasGeek's discretion. 
 
 ## Support
 
