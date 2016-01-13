@@ -10,6 +10,12 @@ We may cancel an event due to unforeseen reasons or circumstances outside our co
 
 ## Merchendise
 
-If you are unhappy with the merchandise, you can return the item in an unused condition, no questions asked within 7 days of purchase either for an exchange or for a refund. Refund process will be initiated and the amount will be reflected back in bank account as per the payment gateway’s processing norms within 7 to 10 business days. Beyond 7 days, returns are validated on a case by case basis. Exchange of merchandise is subject to availability.
+__Returns__
+If you are unhappy with the merchandise for any reason, you can return the item in an unused condition, no questions asked within 7 days of purchase either for an exchange or for a refund. 
+Return of merchandise for exchange of merchandise is subject to availability.
+
+_Refunds__
+
+Upon receiving the item, a refund process will be initiated and the amount will be reflected back in to your bank account as per the payment gateway’s processing norms or within 7 to 10 business days. Beyond 7 days, returns are validated on a case by case basis. 
 
 
