@@ -18,4 +18,11 @@ _Refunds__
 
 Upon receiving the item, a refund process will be initiated and the amount will be reflected back in to your bank account as per the payment gateway’s processing norms or within 7 to 10 business days. Beyond 7 days, returns are validated on a case by case basis. 
 
+## Support
 
+If there are any questions regarding this policy, contact us at:
+
+> HasGeek Learning Private Limited
+> \#2699, 19th Main, 5th Cross, Indiranagar HAL 2nd Stage, > Bangalore - 560 008, KA, India
+> Phone: +91-7676-33-2020
+> E-mail: support@hasgeek.com
