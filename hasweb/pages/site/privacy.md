@@ -124,7 +124,7 @@ To determine whether any of the third party services it uses honor the “Do Not
 
 ## Content and scope of website
 
-Our website may contain links to other websites of interest. However, once the User have used these links to leave our site, the User should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which User provides whilst visiting such sites, and such sites are not governed by this privacy statement. The User should exercise caution and look at the privacy statement applicable to the website in question.
+Our website may contain links to other websites of interest. However, once the User have used these links to leave our site, the User should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which User provides whilst visiting such sites, and such sites and the User are no longer governed by this privacy statement or HasGeek's Terms of Service. The User should exercise caution and look at the privacy statement applicable to the website in question.
 
 ## Support
 
