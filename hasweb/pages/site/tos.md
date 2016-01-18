@@ -8,7 +8,7 @@ We take great care to produce outstanding code, render services and/or products.
 
 HASGEEK SHALL NOT BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND IN CONNECTION WITH THIS AGREEMENT, EVEN IF HASGEEK HAS BEEN INFORMED IN ADVANCE OF THE POSSIBILITY OF SUCH DAMAGES.
 
-We charge for certain services and provide other services without charge. But whether we do charge or not is a commercial decision and we believe it is important that we reserve the right to change pricing and relating policies if we feel the need to do so. But we will alert you when we are about to effect such changes.
+We charge for certain services and provide other services without charge. But whether we do charge or not is a commercial decision and we believe it is important that we reserve the right to change pricing and relating policies if we feel the need to do so. But we will alert you when we are about to bring to effect such changes.
 
 ## Acceptable Use
 
@@ -17,6 +17,8 @@ Your use under these terms must not violate applicable laws, must comply with ou
 ## Communications
 
 In consideration for providing these services and/or products, we would like the liberty of sending you newsletters, announcements or other communications from time to time. You of course can choose to opt out of this by clicking on an ‘unsubscribe’ link provided in such communications. You may be required to enter a valid phone number while purchasing a service or product on HasGeek, or while availing gifts from its advertisers. By registering your phone number with us, you consent to be contacted by HasGeek via phone calls and/or SMS notifications, in case of any purchase or delivery related updates. HasGeek will not use your personal information to initiate any promotional phone calls or SMS.
+
+	see also [privacy](privacy)
 
 ## User Content
 
@@ -29,6 +31,8 @@ Through your use of our websites, attendance at our events or use of our service
 ## Information Security
 
 Information you post or provide us may be meant for public distribution (eg. conference speaker profile) or for secure storage (billing information). We maintain basic standards for preserving the confidentiality of your information on the website commensurate with the kind of services we provide, but please be aware that our website and your information may be vulnerable to attack by determined hackers. Please use your discretion about the type of information that you publicly disclose or share with others on HasGeek.
+
+	see also [privacy](privacy)
 
 ## APIs
 
@@ -85,5 +89,4 @@ You shall indemnify and hold harmless HasGeek, its owners (and partners as appli
 
 ## Governing Law
 
-Again. We are incorporated in India. All dealings with you are governed by, interpreted and construed in accordance with the laws of India. If we have a dispute and any party wishes to initiate legal proceedings in a court of law, the courts at Bangalore shall have exclusive jurisdiction.
-
+We are incorporated in India. All dealings with you are governed by, interpreted and construed in accordance with the laws of India. If we have a dispute and any party wishes to initiate legal proceedings in a court of law, the courts at Bangalore shall have exclusive jurisdiction.
