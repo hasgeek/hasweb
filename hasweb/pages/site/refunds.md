@@ -1,15 +1,28 @@
-title: Cancellation & Refund Policy
+title: Cancellation, Return & Refund Policy
 
-## Job Board
-
-HasGeek reserves the right to consider refunding the purchase amount for such a listing. By issuing a submission to the job board, you acknowledge full awareness of that your purchase amount may not be refunded.
+At HasGeek we believe in offering value in exchange for value. These are our cancellation and refund policies with regards to our various services:
 
 ## Events
 
-You cannot cancel your ticket for an event if you have purchased that ticket using our online payment option. We may cancel an event due to unforeseen reasons or circumstances outside our control (Force Majeure events such as floods, fire, riots, terrorist incidents, bandhs, etc). If that happens, refund of your purchase amount will be subject to HasGeek's discretion. 
+If you wish to cancel your ticket for an event that you have purchased using our online payment option or through cash or card at the venue, write to support@hasgeek.com before the event. 
 
-## Advertising
+We may cancel an event due to unforeseen reasons or circumstances outside our control (Force Majeure events such as floods, fire, riots, terrorist incidents, bandhs, etc). If that happens, refund of your purchase amount will be subject to HasGeek's discretion.
 
-Advertisers may cancel their order through Customer's account if online cancellation functionality is available, or, if not available, with prior written notice to HasGeek, including without limitation electronic mail.  The cancellation of any advertising may be subject to HasGeek’s Advertising Program policies or HasGeek’s ability to re-schedule reserved inventory or cancel ads already in production. Cancelled ads may be published despite cancellation if cancellation of those ads occurs after any applicable commitment date as set forth in advance by HasGeek, in which case Advertiser must pay for those ads.
+## Merchendise
 
-In case you feel that the product or service received is not as shown on the site or as per your expectations, you must bring it to the notice of our customer service at <support@hasgeek.com> within 24 hours of receiving the product or service. The Customer Service Team, after looking into your complaint, will take an appropriate decision.
+__Returns__
+If you are unhappy with the merchandise for any reason, you can return the item in an unused condition, no questions asked within 7 days of purchase either for an exchange or for a refund. 
+Return of merchandise for exchange of merchandise is subject to availability. At the moment all our returns are in-person.
+
+_Refunds__
+
+Upon receiving the item, a refund process will be initiated and the amount will be reflected back in to your bank account as per the payment gateway’s processing norms or within 7 to 10 business days. Beyond 7 days, returns are subject to HasGeek's discretion. 
+
+## Support
+
+If there are any questions regarding this policy, contact us at:
+
+> HasGeek Learning Private Limited
+> \#2699, 19th Main, 5th Cross, Indiranagar HAL 2nd Stage, > Bangalore - 560 008, KA, India
+> Phone: +91-7676-33-2020
+> E-mail: support@hasgeek.com
