@@ -1,10 +1,10 @@
 # Privacy Policy
 
-This privacy policy sets out how HasGeek Learning Private Limited (henceforth “HasGeek”, “us” or “we”) uses and protects any information that the User may give HasGeek when they use this website. HasGeek is committed to ensuring that the User's privacy is protected. 
+This privacy policy sets out how HasGeek Learning Private Limited (henceforth “HasGeek”, “us”, “we” or “our”) uses and protects any information that the User may give HasGeek when they use this website. HasGeek is committed to ensuring that the User's privacy is protected. 
 
 ## Consent to data and acceptance of this policy
 
-**TODO**: Add note about implicit acceptance on usage of HasGeek?
+By agreeing to our [Terms Of Service](terms), you are also agreeing to our privacy policy. 
 
 ## Policy revisions
 
@@ -54,7 +54,6 @@ We operate multiple websites and services. When using these websites and service
 * The pages the User was trying to access
 * The time at which User visited each page
 * The page the User was on before visiting this page
-* **TODO**: Add note about tracking data on embeds
 
 The User may also be required to submit additional information about themselves, including but not limited to their publicly used name, employer name, job title, contact information and any other information as required for their use of our services.
 
@@ -115,12 +114,6 @@ __Third-party analytics__
 We use analytics tools and other third party technologies, such as Google Analytics, to collect non-personal information in the form of various usage metrics when the User uses our services. These tools and technologies collect and analyse certain types of information, including cookies, IP addresses, device and software identifiers, referring and exit URLs, onsite behavior and usage information, feature use metrics and statistics, usage and purchase history, MAC Address, mobile unique device ID, and other similar information. The third party analytics companies who collect information on our services and other online products and/or services may combine the information collected with other information they have independently collected from other websites and/or other online or mobile products and services relating to User's activities across their network of websites as well as online and/or mobile products and services. Many of these companies collect and use information under their own privacy policies. 
 
 The User may opt out of Google Analytics by visiting the Google Analytics opt-out page or by using an ad blocker.
-
-__Do Not Track requests__
-
-**TODO**: Check this with Kiran
-This Application does not support “Do Not Track” requests.
-To determine whether any of the third party services it uses honor the “Do Not Track” requests, please read their privacy policies.
 
 ## Content and scope of website
 
