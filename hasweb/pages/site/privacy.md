@@ -1,6 +1,6 @@
-# Privacy Policy
+title: Privacy Policy
 
-This privacy policy sets out how HasGeek Learning Private Limited (henceforth “HasGeek”, “us”, “we” or “our”) uses and protects any information that the User may give HasGeek when they use this website. HasGeek is committed to ensuring that the User's privacy is protected. 
+This document sets out how HasGeek Learning Private Limited (henceforth “HasGeek”, “us”, “we” or “our”) uses and protects any information that the User may give HasGeek when they use this website. HasGeek is committed to ensuring that the User's privacy is protected. 
 
 ## Consent to data and acceptance of this policy
 
