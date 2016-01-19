@@ -4,7 +4,7 @@ Welcome to our website.
 
 ## Definitions and legal references
 
-The term “HasGeek Learning Private Limited” or “us” “we” or “our” refers to the owner of the website whose registered office is No 141/142, 2nd Cross, Pai Layout, Hulimavu Gate, Bannerghatta Road, Bangalore - 560 076, Karnataka, India. Our registration number is ??? and we are incorporated under the Limited Liability Partnership Act 2008 of India.
+The term “HasGeek Learning Private Limited” or “us” “we” or “our” refers to the owner of the website whose registered office is No 141/142, 2nd Cross, Pai Layout, Hulimavu Gate, Bannerghatta Road, Bangalore - 560 076, Karnataka, India. Our registration number is U74900KA2015PTC083923 and we are incorporated under the Limited Liability Partnership Act 2008 of India.
 
 Definition of other terms used in this document:
 
