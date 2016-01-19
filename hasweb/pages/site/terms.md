@@ -4,12 +4,12 @@ Welcome to our website.
 
 ## Definitions and legal references
 
-The term “HasGeek Learning Private Limited” or “us” or “we” refers to the owner of the website whose registered office is No 141/142, 2nd Cross, Pai Layout, Hulimavu Gate, Bannerghatta Road, Bangalore - 560 076, Karnataka, India. Our registration number is AAA-3107 and we are incorporated under the Limited Liability Partnership Act 2008 of India.
+The term “HasGeek Learning Private Limited” or “us” “we” or “our” refers to the owner of the website whose registered office is No 141/142, 2nd Cross, Pai Layout, Hulimavu Gate, Bannerghatta Road, Bangalore - 560 076, Karnataka, India. Our registration number is ??? and we are incorporated under the Limited Liability Partnership Act 2008 of India.
 
 Definition of other terms used in this document:
 
-* __"User"__: The individual using this Application
 * __"This Application" or "Service"__: This website
+* __"User"__: The individual using this Application
 * __Account__: A collection of User given information
 
 ## Acceptance of Terms of Service and breach
@@ -34,7 +34,7 @@ The User's acitivities under these terms must not violate applicable laws, must 
 
 ## Prohibited uses
 
-In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: 
+In addition to other prohibitions as set forth in the Terms of Service, the User is prohibited from using the site or its content: 
 
 (a) for any unlawful purpose; 
 (b) to solicit others to perform or participate in any unlawful acts; 
@@ -46,15 +46,15 @@ In addition to other prohibitions as set forth in the Terms of Service, you are 
 (h) to collect or track the personal information of others; 
 (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; 
 (j) for any obscene or immoral purpose; or 
-(k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.
+(k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate the User's use of the Service or any related website for violating any of the prohibited uses.
 
-We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.
+We do not guarantee, represent or warrant that the User's use of our service will be uninterrupted, timely, secure or error-free.
 
 We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.
 
-You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.
+The User agrees that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to the User.
 
-You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.
+The User expressly agrees that the use of, or inability to use, the service is at their sole risk. The service and all products and services delivered to the User through the service are (except as expressly stated by us) provided 'as is' and 'as available' for their use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.
 
 ## Disclaimer
 
