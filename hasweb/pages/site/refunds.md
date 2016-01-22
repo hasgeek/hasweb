@@ -1,28 +1,31 @@
 title: Cancellation, Return & Refund Policy
 
-At HasGeek we believe in offering value in exchange for value. These are our cancellation and refund policies with regards to our various services:
+At HasGeek we believe in offering value in exchange for value. These are our cancellation and refund policies with regards to our various services.
+
+Refunds, where eligible, are typically issued via the same instrument that was used to make the payment (so the refund will go to your card or bank for an online payment). However, we are sometimes unable to do this and may offer you a cheque, bank transfer, cash, or credit coupon, at our discretion.
 
 ## Events
 
-If you wish to cancel your ticket for an event that you have purchased using our online payment option or through cash or card at the venue, write to support@hasgeek.com before the event. 
+We offer a 100% refund on cancellations until the day before the event, but some events may have a specific policy that overrides this generic policy. Please check if the event you are cancelling for has a specific policy.
 
-We may cancel an event due to unforeseen reasons or circumstances outside our control (Force Majeure events such as floods, fire, riots, terrorist incidents, bandhs, etc). If that happens, refund of your purchase amount will be subject to HasGeek's discretion.
+Please write to us at <support@hasgeek.com> to request a refund (or see the [contact info](/about/contact) page for other ways to contact us).
 
-## Merchendise
+We may cancel an event due to unforeseen reasons or circumstances outside our control (force majeure events such as floods, fire, riots, terrorist incidents, bandhs, etc). If that happens, we may reschedule the event or issue a full or partial refund at our discretion.
 
-__Returns__
-If you are unhappy with the merchandise for any reason, you can return the item in an unused condition, no questions asked within 7 days of purchase either for an exchange or for a refund. 
-Return of merchandise for exchange of merchandise is subject to availability. At the moment all our returns are in-person.
+## Merchandise
 
-_Refunds__
+**Returns:** If you are unhappy with the merchandise for any reason, you can return the item in an unused condition, no questions asked, within 7 days of purchase for a replacement or a refund. Replacement is subject to availability. At the moment all returns must be in-person at our office or at our events.
 
-Upon receiving the item, a refund process will be initiated and the amount will be reflected back in to your bank account as per the payment gateway’s processing norms or within 7 to 10 business days. Beyond 7 days, returns are subject to HasGeek's discretion. 
+Some items may be sold without the option of a return, and will be indicated as such on the item description page or during the checkout process.
+
+**Refunds:** Refunds are issued upon receipt of an item in a saleable condition (subject to the above exception). A restocking fee may apply.
+
+## Sponsorships, advertising and job board
+
+Offline bookings are not covered under this policy and will have specific terms revealed to you at the time of making the booking.
+
+For online bookings, any unused credits are available for refund. Credits, once used, are deemed a final, irreversible sale.
 
 ## Support
 
-If there are any questions regarding this policy, contact us at:
-
-> HasGeek Learning Private Limited
-> \#2699, 19th Main, 5th Cross, Indiranagar HAL 2nd Stage, > Bangalore - 560 008, KA, India
-> Phone: +91-7676-33-2020
-> E-mail: support@hasgeek.com
+Please see the [contact info](/about/contact) page if you have any questions regarding this policy.
