@@ -1,30 +1,18 @@
 title: About HasGeek
 
-HasGeek creates discussion spaces for geeks.
+HasGeek creates discussion spaces for geeks. We host [Hasjob](https://hasjob.co/), the HasGeek Job Board, and several well regarded technology conferences:
 
-We currently run editions of:
+* [Fifth Elephant](https://fifthelephant.in/), on data and analytics
+* [Rootconf](https://rootconf.in/), on infrastructure
+* [JSFoo](https://jsfoo.in/), on JavaScript
+* [Meta Refresh](https://metarefresh.in/), on front-end engineering and product design
+* [droidconIN](https://droidcon.in/), on Android
+* [JuliaCon India](http://juliacon.in/), on the Julia language
 
-* [Rootconf](https://rootconf.in/)
-* [Meta Refresh](https://metarefresh.in/)
-* [Fifth Elephant](https://fifthelephant.in/)
-* [JSFoo](https://jsfoo.in/)
-* [Droidcon India](https://droidcon.in/)
+You may also know us for our past events [DocType HTML5](http://www.doctypehtml5.in/), [AndroidCamp](https://androidcamp.hasgeek.com/), [Scaling PHP in the Cloud](https://phpcloud.hasgeek.com/) and the [Cartonama Conference](https://workshop.cartonama.com/).
 
-Previously, we've ran editions of:
+Future events are announced on [Talkfunnel](https://talkfunnel.com/), our community-powered website for event organisers and speakers. Come to our events to meet like-minded people, learn new things, and discover new opportunities. Videos from the events we host are on [HasGeek TV](https://hasgeek.tv).
 
-* [DocType HTML5](http://www.doctypehtml5.in/)
-* [AndroidCamp](https://androidcamp.hasgeek.com/)
-* [Scaling PHP in the Cloud](https://phpcloud.hasgeek.com/)
-* the [Cartonama Workshop](https://workshop.cartonama.com/)
-* [Geekup](https://geekup.in/)
-* [hacknights](https://hacknight.in/)
+[We publish our code on GitHub](https://github.com/hasgeek). Work with us to make better community software for everyone.
 
-To see what else is coming up, check [Funnel](https://talkfunnel.com). Come to our events to meet like-minded people, learn new things, and discover new opportunities!
-
-We also: 
-* Run a job board, [Hasjob](https://hasjob.co).
-* Publish [our code](https://github.com/hasgeek).
-
-Talk to us!
-We are [on Slack](http://friendsofhasgeek.slack.com). To sign up, first send yourself an invite from [friends.hasgeek.com](http://friends.hasgeek.com).
-We are on [Twitter](https://twitter.com/hasgeek) and [Facebook](https://www.facebook.com/HasGeek).
+HasGeek re-incorporated in 2015 as HasGeek Learning Private Limited, with a renewed focus on learning opportunities for people in technology. We were previously HasGeek Media LLP (since 2010).
