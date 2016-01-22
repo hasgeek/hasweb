@@ -15,4 +15,4 @@ Future events are announced on [Talkfunnel](https://talkfunnel.com/), our commun
 
 [We publish our code on GitHub](https://github.com/hasgeek). Work with us to make better community software for everyone.
 
-HasGeek re-incorporated in 2015 as HasGeek Learning Private Limited, with a renewed focus on learning opportunities for people in technology. We were previously HasGeek Media LLP (since 2010).
+HasGeek re-incorporated in 2015 as HasGeek Learning Private Limited, with a renewed focus on learning opportunities for people in technology. We were previously HasGeek Media LLP (since 2010). If you do business with us, you may continue to be affiliated with the LLP through a transition period.
