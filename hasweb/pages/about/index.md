@@ -1,21 +1,18 @@
 title: About HasGeek
 
-HasGeek creates discussion spaces for geeks.
+HasGeek creates discussion spaces for geeks. We host [Hasjob](https://hasjob.co/), the HasGeek Job Board, and several well regarded technology conferences:
 
-We made
-[DocType HTML5](http://www.doctypehtml5.in/),
-[AndroidCamp](https://androidcamp.hasgeek.com/),
-[Scaling PHP in the Cloud](https://phpcloud.hasgeek.com/),
-[JSFoo](https://jsfoo.in/),
-[Droidcon India](https://droidcon.in/),
-the [Cartonama Workshop](https://workshop.cartonama.com/),
-[Meta Refresh](https://metarefresh.in/) and
-[Rootconf](https://rootconf.in/).
-We host an [IRC channel](irc://irc.freenode.net/#hasgeek)
-and a [job board](https://jobs.hasgeek.com/).
-We publish [our code](https://github.com/hasgeek).
-We are on [Twitter](https://twitter.com/hasgeek) and [Facebook](https://www.facebook.com/HasGeek).
-We occasionally host a [Geekup](https://geekup.in/) with visitors to our office in Bangalore.
-We conduct [hacknights](https://hacknight.in/) alongside our events. Come to our events to meet like-minded people, learn new things, and discover new opportunities.
+* [Fifth Elephant](https://fifthelephant.in/), on data and analytics
+* [Rootconf](https://rootconf.in/), on infrastructure
+* [JSFoo](https://jsfoo.in/), on JavaScript
+* [Meta Refresh](https://metarefresh.in/), on front-end engineering and product design
+* [droidconIN](https://droidcon.in/), on Android
+* [JuliaCon India](http://juliacon.in/), on the Julia language
 
-[See what else is coming up in the Funnel](https://funnel.hasgeek.com). [Sign up to be notified when we do an event](http://eepurl.com/duGmH).
+You may also know us for our past events [DocType HTML5](http://www.doctypehtml5.in/), [AndroidCamp](https://androidcamp.hasgeek.com/), [Scaling PHP in the Cloud](https://phpcloud.hasgeek.com/) and the [Cartonama Conference](https://workshop.cartonama.com/).
+
+Future events are announced on [Talkfunnel](https://talkfunnel.com/), our community-powered website for event organisers and speakers. Come to our events to meet like-minded people, learn new things, and discover new opportunities. Videos from the events we host are on [HasGeek TV](https://hasgeek.tv).
+
+[We publish our code on GitHub](https://github.com/hasgeek). Work with us to make better community software for everyone.
+
+HasGeek re-incorporated in 2015 as HasGeek Learning Private Limited, with a renewed focus on learning opportunities for people in technology. We were previously HasGeek Media LLP (since 2010). If you do business with us, you may continue to be affiliated with the LLP through a transition period.
