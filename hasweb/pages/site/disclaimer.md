@@ -1,7 +1,0 @@
-title: Disclaimer
-
-The information contained in this website is for general information purposes only. The information is provided by HasGeek and by users of this website. While we endeavour to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
-
-In no event will HasGeek be liable for any damages, including without limitation direct or indirect, special, incidental, or consequential damages, losses or expenses arising in connection with this site or use thereof or inability to use by any party, or in connection with any failure of performance, error, omission, interruption, defect, delay in operation or transmission, computer virus or line or system failure, even if HasGeek, or representatives thereof, are advised of the possibility of such damages, losses or expenses.
-
-Through this website you are able to link to other websites which are not under the control of HasGeek. We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.

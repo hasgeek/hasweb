@@ -1,4 +1,8 @@
-## community guidelines + privacy
+title: Community guidelines
+
+Please see our [terms of service](terms) policy for important definitions used here.
+
+(To be drafted)
 
 If you violate our community guidelines then:
 
