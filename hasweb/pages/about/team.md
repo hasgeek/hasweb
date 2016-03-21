@@ -14,3 +14,6 @@ We are a small group of broad-minded geeks, communicators, and overall nice peop
 * Shreyas Satish ([@shreyas_satish](https://twitter.com/shreyas_satish))
 * Vidya Ramakrishnan ([@vidya_ramki](https://twitter.com/vidya_ramki))
 * Zainab Bawa, director ([@zainabbawa](https://twitter.com/zainabbawa))
+
+## Careers with HasGeek
+Please look up [our Hasjob page](https://hasjob.co/hasgeek.com) for our work environment and current openings, or drop in during [Open House on Fridays](contact) to discuss in person.
