@@ -3,6 +3,7 @@ title: HasGeek team
 We are a small group of broad-minded geeks, communicators, and overall nice people.
 
 * Anish TP ([@tepotheus](https://twitter.com/tepotheus))
+* Beli Bopaiah
 * Hari CM ([@haricm](http://twitter.com/haricm))
 * Jyothsna Madabusi
 * Karthik Balakrishnan ([@karthikb351](https://twitter.com/karthikb351))
