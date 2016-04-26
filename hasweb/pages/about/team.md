@@ -5,6 +5,7 @@ We are a small group of broad-minded geeks, communicators, and overall nice peop
 * Anish TP ([@tepotheus](https://twitter.com/tepotheus))
 * Beli Bopaiah
 * Hari CM ([@haricm](http://twitter.com/haricm))
+* Jaya Lakshmi
 * Jyothsna Madabusi
 * Karthik Balakrishnan ([@karthikb351](https://twitter.com/karthikb351))
 * Kiran Jonnalagadda, director ([@jackerhack](https://twitter.com/jackerhack))
