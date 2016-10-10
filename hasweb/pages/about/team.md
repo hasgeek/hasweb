@@ -3,7 +3,6 @@ title: HasGeek team
 We are a small group of broad-minded geeks, communicators, and overall nice people.
 
 * Anish TP ([@tepotheus](https://twitter.com/tepotheus))
-* Beli Bopaiah
 * Hari CM ([@haricm](http://twitter.com/haricm))
 * Jayalakshmi AG
 * Jyothsna Madabusi
@@ -11,7 +10,8 @@ We are a small group of broad-minded geeks, communicators, and overall nice peop
 * Kiran Jonnalagadda, director ([@jackerhack](https://twitter.com/jackerhack))
 * Manjunath AK
 * Murali Krishna ([@ajmuralikrishna](https://twitter.com/ajmuralikrishna))
-* Sindhu Sundar ([@sindhu](http://twitter.com/sindhu))
+* Raghu Mohan ([@pythonhulk](https://twitter.com/pythonhulk))
+* Sandhya Ramesh ([@sandygrains](https://twitter.com/sandygrains))
 * Shreyas Satish ([@shreyas_satish](https://twitter.com/shreyas_satish))
 * Vidya Ramakrishnan ([@vidya_ramki](https://twitter.com/vidya_ramki))
 * Zainab Bawa, director ([@zainabbawa](https://twitter.com/zainabbawa))
