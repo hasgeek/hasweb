@@ -7,9 +7,9 @@ HasGeek creates discussion spaces for geeks. We host [Hasjob](https://hasjob.co/
 * [JSFoo](https://jsfoo.in/), on JavaScript
 * [Meta Refresh](https://metarefresh.in/), on front-end engineering and product design
 * [droidconIN](https://droidcon.in/), on Android
-* [JuliaCon India](http://juliacon.in/), on the Julia language
+* [50p](https://50p.in/), on payments infrastructure
 
-You may also know us for our past events [DocType HTML5](http://www.doctypehtml5.in/), [AndroidCamp](https://androidcamp.hasgeek.com/), [Scaling PHP in the Cloud](https://phpcloud.hasgeek.com/) and the [Cartonama Conference](https://workshop.cartonama.com/).
+You may also know us for our past events [DocType HTML5](http://www.doctypehtml5.in/), [AndroidCamp](https://androidcamp.hasgeek.com/), [Scaling PHP in the Cloud](https://phpcloud.hasgeek.com/) and the [Cartonama Conference](https://cartonama.com/).
 
 Future events are announced on [Talkfunnel](https://talkfunnel.com/), our community-powered website for event organisers and speakers. Come to our events to meet like-minded people, learn new things, and discover new opportunities. Videos from the events we host are on [HasGeek TV](https://hasgeek.tv).
 
