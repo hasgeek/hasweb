@@ -7,7 +7,7 @@ We are here as a community to deliberate on the topics of the event.
 1. Be nice to everyone,
 2. Be empathetic,
 3. Be questioning, as it furthers the discussion, but
-4. Discuss ideas, not people and their personalities (as that would be ad hominem).
+4. Discuss ideas, not people and their personalities (as that would be _ad hominem_).
 
 We strongly condemn any kind of harassment of any fellow participant. This includes:
 
