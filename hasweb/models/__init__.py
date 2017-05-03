@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from hasweb import app
 from coaster.sqlalchemy import IdMixin, TimestampMixin, BaseMixin, BaseNameMixin
 

@@ -3,9 +3,9 @@
 # The imports in this file are order-sensitive
 
 from flask import Flask
-from flask.ext.flatpages import FlatPages
-from flask.ext.lastuser import Lastuser
-from flask.ext.lastuser.sqlalchemy import UserManager
+from flask_flatpages import FlatPages
+from flask_lastuser import Lastuser
+from flask_lastuser.sqlalchemy import UserManager
 from baseframe import baseframe, assets, Version
 import coaster.app
 from ._version import __version__
