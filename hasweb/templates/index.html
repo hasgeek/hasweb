@@ -29,16 +29,31 @@
         We operate <a href="https://hasjob.co/">Hasjob</a>,
         hang out on a <a href="https://friends.hasgeek.com/">Slack channel</a>, and
         <a href="https://github.com/hasgeek">publish our code</a>.
-        Our activities reach thousands of developers every month.
+        Our activities reach thousands of developers every month. 
+        <a href="https://talkfunnel.com/">Speak at our events</a>,
+        or <a href="http://eepurl.com/cygsfr">sign up to be notified by email</a> when we do one.
+        Watch videos from past events on <a href="https://hasgeek.tv/">HasGeek TV</a>.
       </p>
     </div>
     <div class="col-md-6 masthead">
-      <p>
-        <a href="https://talkfunnel.com/">Speak at our events</a>,
-        or <a href="http://eepurl.com/cygsfr">sign up to be notified</a> when we do one.
-        Watch videos from past events on <a href="https://hasgeek.tv/">HasGeek TV</a>.
-        Coming up:
-      </p>
+      <p>To receive updates and information about events tickets, confirmed speakers, schedule and more.</p>
+      <div>
+        <p><button class="btn btn-primary" id="new-subscribe" onclick="window._izq.push(['triggerPrompt']);">Subscribe</button></p>
+        <p><button class="btn btn-primary hide" id="update-subscribe" onclick="window._izq.push(['updateSubscription','subscribe']);">Subscribe</button></p>
+        <p><button class="btn btn-primary hide" id="unsubscribe" onclick="window._izq.push(['updateSubscription','unsubscribe']);">Unsubscribe</button></p>
+      </div>
+      <div class="modal fade" id="subscription-confirmation" tabindex="-1" role="dialog" aria-labelledby="subscription-confirmation">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h4>Thank you for subscribing to HasGeek push notifications!</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <ul class="cardset row">
@@ -140,4 +155,35 @@
     (document,'script',location.protocol+'//scrollback.io'));
 </script>
 -#}
+
+<script>
+  if ('serviceWorker' in navigator) {
+
+    window._izq.push(["register_callback", function (obj) {
+      if(obj.statuscode == 1) {
+        $("#new-subscribe").hide();
+        $("#update-subscribe").hide();
+        $("#unsubscribe").show().removeClass('hide');
+        $("#subscription-confirmation").modal('show');
+      }
+      if(obj.statuscode == 7) {
+        $("#new-subscribe").hide();
+        $("#unsubscribe").hide();
+        $("#update-subscribe").removeClass('hide').show();
+      }
+    }]);
+
+    navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
+      serviceWorkerRegistration.pushManager.getSubscription().then(function (pushSubscription) {
+        if (pushSubscription) {
+          $("#new-subscribe").hide();
+          $("#update-subscribe").hide();
+          $("#unsubscribe").show().removeClass('hide');
+          return;
+        }
+      });
+    });
+
+  }
+</script>
 {% endblock %}

@@ -30,3 +30,13 @@ def about_policy_index():
 @app.route('/site/<path:path>')
 def sitepolicy(path):
     return redirect(url_for('about', path='policy/' + path))
+
+
+@app.route('/manifest.json')
+def manifest():
+    return app.send_static_file('manifest.json')
+
+
+@app.route('/service-worker.js')
+def service_worker():
+    return app.send_static_file('service-worker.js')

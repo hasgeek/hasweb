@@ -107,7 +107,7 @@ $body-line-height: 20px;
             display: block;
         }
         p {
-            margin-bottom: $body-line-height * 1.5;
+            margin-bottom: 15px;
             font-size: 19px;
             line-height: 22px;
             line-height: $body-line-height * 1.5;
@@ -128,7 +128,7 @@ $body-line-height: 20px;
 @media screen and (min-width: 768px) and (max-width: 992px ) {
     .masthead {
         p {
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             font-size: 16px;
             line-height: 25px;
         }
@@ -139,16 +139,17 @@ $body-line-height: 20px;
         }
     }
 }
-@media screen and (min-width: 993px) and (max-width: 1200px ) {
-    .masthead {
-        p {
-            margin-bottom: $body-line-height * 1.5;
-            font-size: 19px;
-            line-height: $body-line-height * 1.5;
-        }
-        p.primary {
-            font-size: 28px;
-            line-height: $body-line-height * 2;
-        }
-    }
+
+.cardset {
+    margin-top: 15px;
 }
+
+.iz-https-branding {
+    display: none !important;
+}
+
+.fb_iframe_widget {
+    width: 100% !important;
+    overflow: hidden;
+}
+

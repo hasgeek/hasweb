@@ -1,6 +1,11 @@
 {% extends "baseframe.html" -%}
 {% from "baseframe/components.html" import responsive_networkbar with context %}
 
+{%- block layoutheaders %}
+  <script> window._izq = window._izq || []; window._izq.push(["init"]); </script>
+  <script src="//cdn.izooto.com/scripts/fe762cfc3a765d77eef6c574d2379623e1981fc0.js"></script>
+{%- endblock %}
+
 {% block networkbar %}{{ responsive_networkbar(siteid=config['SITE_ID'], login=false) }}{% endblock %}
 
 {% block baseheadline -%}
