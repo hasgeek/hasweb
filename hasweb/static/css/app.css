@@ -9,6 +9,97 @@
   margin-top: 4.8em;
 }
 
+.conf-card {
+  background-color: #816894;
+  border: solid 2px;
+  border-color: #604E6E;
+  padding: 10px;
+  padding-top: 0px;
+  margin-bottom: 10px;
+}
+.conf-card-title-block {
+  background-color: #604E6E;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 10px;
+}
+.conf-card-title {
+  color: white;
+  margin-bottom: 0;
+  margin-top: 0px;
+  line-height: 1em;
+}
+.conf-card-title-date {
+  color: white;
+  font-size: smaller;
+}
+.conf-card-blurb {
+  color: white;
+  padding-top: 10px;
+}
+.conf-card-btn {
+  color: #fff;
+}
+.conf-card-btn-url {
+  background-color: #df5e0e;
+  border-color: #df5e0e;
+  border-bottom: 2px solid #B44C10;
+}
+.conf-card-btn-url:hover, .conf-card-btn-url:focus, .conf-card-btn-url:active {
+  background-color: #B44C10;
+  border-color: #B44C10;
+  border-bottom: 2px solid #df5e0e;
+}
+.conf-card-btn-funnel {
+  background-color: #df5e0e;
+  border-color: #df5e0e;
+  border-bottom: 2px solid #B44C10;
+}
+.conf-card-btn-funnel:hover, .conf-card-btn-funnel:focus, .conf-card-btn-funnel:active {
+  background-color: #B44C10;
+  border-color: #B44C10;
+  border-bottom: 2px solid #df5e0e;
+}
+
+.event-card {
+  background-color: white;
+  border: solid 1px;
+  border-color: #856a91;
+  padding: 10px;
+  padding-top: 0px;
+  margin-bottom: 10px;
+  min-height: 200px;
+}
+.event-card-title-block {
+  border-bottom: 1px solid #856a91;
+  padding-bottom: 10px;
+}
+.event-card-title {
+  color: #856a91;
+  margin-bottom: 0;
+  line-height: 1em;
+}
+.event-card-title-date {
+  color: #856a91;
+  font-size: smaller;
+}
+.event-card-blurb {
+  padding-top: 10px;
+}
+.event-card-btn {
+  color: #fff;
+}
+.event-card-btn-url {
+  background-color: #df5e0e;
+  border-color: #df5e0e;
+  border-bottom: 2px solid #B44C10;
+}
+.event-card-btn-url:hover, .event-card-btn-url:focus, .event-card-btn-url:active {
+  background-color: #B44C10;
+  border-color: #B44C10;
+  border-bottom: 2px solid #df5e0e;
+}
+
 #page-header.masthead {
   padding-top: 20px;
   padding-bottom: 10px;

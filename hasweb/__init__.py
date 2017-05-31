@@ -24,7 +24,7 @@ from . import models, views  # NOQA
 # Configure the app
 coaster.app.init_app(app)
 migrate = Migrate(app, models.db)
-baseframe.init_app(app, requires=['baseframe-bs3', 'fontawesome', 'hasweb'])
+baseframe.init_app(app, requires=['baseframe-bs3', 'fontawesome', 'ractive', 'hasweb'])
 lastuser.init_app(app)
 lastuser.init_usermanager(UserManager(models.db, models.User))
 pages.init_app(app)

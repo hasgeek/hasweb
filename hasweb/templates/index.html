@@ -37,35 +37,24 @@
         <a href="https://talkfunnel.com/">Speak at our events</a>,
         or <a href="http://eepurl.com/cygsfr">sign up to be notified</a> when we do one.
         Watch videos from past events on <a href="https://hasgeek.tv/">HasGeek TV</a>.
-        Coming up:
       </p>
     </div>
   </div>
-  <ul class="cardset row">
-    {%- for etitle, edate, eurl, edesc in [
-        ("Introducing Anthill Inside. Tickets are now available", "July 29, Bangalore", 'https://anthillinside.in/2017/',
-          "Anthill Inside is a conference on AI and deep learning."),
-        ("JSFoo 2017 tickets are now available", "September 15 – September 16, Bangalore", 'https://jsfoo.in/2017/#tickets',
-          "JSFoo is India’s premier JavaScript conference. The broad theme this year is going to be building reliable web apps."),
-        ("The Fifth Elephant 2017 tickets are now available", "July 27 – July 28, Bangalore", 'https://fifthelephant.in/2017/#tickets',
-          "The Fifth Elephant is a renowned gathering of data scientists, analysts, researchers and technologists working in the areas of machine learning and deep learning from different domains."),
-        ("Rootconf 2017 tickets are now available", "May 11 – May 12, Bangalore", 'https://rootconf.in/2017/#tickets',
-          "We intend to bring together insights from DevOps practitioners and decision-makers about how they plan and maintain their infrastructure to ensure high service reliability."),
-        ("JSFoo 2017 Call for Proposals is open", "Sept 8 – Sept 9, Bangalore", 'https://jsfoo.talkfunnel.com/2017/',
-          "The theme for this year is building reliable web apps."),
-        ] %}
-      <li class="col-md-4 col-sm-6">
-        <a href="{{ eurl }}">
-          <div class="card-title">
-            <h2>{{ etitle }}</h2>
-            <h3>{{ edate }}</h3>
-          </div>
-          <div class="card-body">
-            {{ edesc }}
-          </div>
-        </a>
-      </li>
-    {%- endfor %}
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Upcoming Events</h2>
+      <ul class="row cardset" id="events-container"><h2 class="text-center"><span class="loading">&nbsp;</span></h2></ul>
+    </div>
+    <div class="col-md-4">
+      <h2>Upcoming Conferences</h2>
+      <div id="conf-container"><h2 class="text-center"><span class="loading">&nbsp;</span></h2></div>
+    </div>
+  </div>
+  <div class="row" >
+    
+  </div>
+  <ul class="row cardset" >
+    
   </ul>
   <div class="row">
     <div class="col-md-12 masthead">
@@ -116,8 +105,8 @@
         <a href="https://metarefresh.in/2012/">Meta Refresh 2012</a>,
         <a href="https://workshop.cartonama.com/">Cartonama Workshop</a>,
         JSFoo 2011-12 (in
-          <a href="https://jsfoo.in/bangalore2011">Bangalore</a>,
-          <a href="https://jsfoo.in/pune2012">Pune</a> and
+          <a href="https://jsfoo.in/bangalore2011">Bangalore</a>, 
+          <a href="https://jsfoo.in/pune2012">Pune</a>, and
           <a href="https://jsfoo.in/chennai2012">Chennai</a>),
         <a href="https://droidcon.in/2011">Droidcon India 2011</a>,
         <a href="https://phpcloud.hasgeek.com/">Scaling PHP in the Cloud</a>,
@@ -128,16 +117,192 @@
   </div>
 {% endblock %}
 {% block footerscripts %}
-{#-
-<script>
-    window.scrollback = {
-      streams:['hasgeek'], theme: 'light', ticker: true, minimize: true
-    };
-    /***** don't edit below *****/
-    (function(d,s,h,e){e=d.createElement(s);e.async=1;
-    e.src=h+'/client.min.js';scrollback.host=h;
-    d.getElementsByTagName(s)[0].parentNode.appendChild(e);}
-    (document,'script',location.protocol+'//scrollback.io'));
+{% raw %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script id='conf-card' type='text/ractive'>
+  {{#if color}}
+    {{>style-conf-card}}
+  {{/if}}
+  <!-- <div class="col-md-6 col-sm-6"> -->
+    <div class="conf-card conf-card-{{idx}}">
+      <div class="conf-card-title-block conf-card-title-block-{{idx}}">
+        <h2 class="conf-card-title conf-card-title-{{idx}}">{{ title }}</h2>
+        <small class="conf-card-title-date conf-card-title-date-{{idx}}">{{ date }}, {{ city }}</small>
+      </div>
+      <p class="conf-card-blurb conf-card-blurb-{{idx}}">{{ blurb }}</p>
+      {{#if url}}
+      <a href="{{ url }}" class="btn btn-sm btn-info conf-card-btn-url conf-card-btn-url-{{idx}}"><i class="fa fa-ticket"></i> Tickets</a>
+      {{/if}}
+      {{#funnel}}
+      <a href="{{ funnel }}" class="btn btn-sm btn-info conf-card-btn-funnel conf-card-btn-funnel-{{idx}}"><i class="fa fa-file-text-o"></i> Call for proposals</a>
+      {{/if}}
+    </div>
+  <!-- </div> -->
 </script>
--#}
+<script id='style-conf-card' type='text/ractive'>
+<style type="text/css">
+  .conf-card-{{idx}} {
+    background-color: {{ color.primary }};
+    border-color: {{ color.primary_dark }};
+  }
+
+  .conf-card-title-block-{{idx}} {
+    background-color: {{ color.primary_dark }};
+  }
+
+  .conf-card-btn-url-{{idx}} {
+    background-color: {{ color.primary_dark }};
+    border-color: {{ color.primary_dark }};
+    text: {{buttonTextColor}};
+  }
+  .conf-card-btn-url-{{idx}}:hover, .conf-card-btn-url-{{idx}}:focus, .conf-card-btn-url-{{idx}}:active {
+    background-color: {{ color.primary_dark }};
+    border-color: {{ color.primary_dark }};
+    filter: brightness(85%);
+  }
+  .conf-card-btn-funnel-{{idx}} {
+    background-color: {{ color.primary_dark }};
+    border-color: {{ color.primary_dark }};
+    text: {{buttonTextColor}};
+  }
+  .conf-card-btn-funnel-{{idx}}:hover, .conf-card-btn-funnel-{{idx}}:focus, .conf-card-btn-funnel-{{idx}}:active {
+    background-color: {{ color.primary_dark }};
+    border-color: {{ color.primary_dark }};
+    filter: brightness(85%);
+  }
+</style>
+</script>
+<script id='event-card' type='text/ractive'>
+  <div class="col-md-6 col-sm-6">
+    <div class="event-card">
+      <div class="event-card-title-block">
+        <h2 class="event-card-title">{{ title }}</h2>
+        <small class="event-card-title-date">{{ date }}, {{ city }}</small>
+      </div>
+      <p class="event-card-blurb">{{ blurb }}</p>
+      {{#if url}}
+      <a href="{{ url }}" class="btn btn-sm btn-info event-card-btn-url">Attend</a>
+      {{/if}}
+    </div>
+  </div>
+</script>
+<!-- <script id='event-card' type='text/ractive'>
+  <li class="col-md-6 col-sm-6">
+    <a href="{{ url }}">
+      <div class="card-title">
+        <h2>{{ title }}</h2>
+        <h3>{{ date }}, {{ venue }}, {{ city }}.</h3>
+      </div>
+      <div class="card-body">
+        {{ blurb }}
+      </div>
+    </a>
+  </li>
+</script> -->
+<script>
+
+    $(document).ready(function (argument) {
+      loadEvents();
+    });
+
+    function loadEvents() {
+      $.getJSON("https://hasgeek.github.io/events/api/all.json")
+        .done(function success(data) {
+
+          eventComponent = Ractive.extend({
+            template: '{{#if inFuture}}{{>event-card}}{{/if}}',
+            computed: {
+              inFuture: function() {
+                return new Date(this.get('start_time')) > new Date();
+              },
+              date: function () {
+                startTime = new Date(this.get('start_time'));
+                endTime = new Date(this.get('end_time'));
+                if (startTime.toDateString() === endTime.toDateString()) { // same day 
+                  return moment(startTime).format('ddd, D MMM, hA')+"-"+moment(endTime).format("hA");
+                }
+                else { // multiple days
+                  return moment(startTime).format("D")+"–"+moment(endTime).format("D MMM YYYY");
+                }
+              }, 
+              buttonTextColor: function(color) { return idealTextColor(this.get('color.primary_dark')); }
+            }
+          });
+
+          confComponent = Ractive.extend({
+            template: '{{#if inFuture}}{{>conf-card}}{{/if}}',
+            computed: {
+              inFuture: function() {
+                return new Date(this.get('start_time')) > new Date();
+              },
+              date: function () {
+                startTime = new Date(this.get('start_time'));
+                endTime = new Date(this.get('end_time'));
+                if (startTime.toDateString() === endTime.toDateString()) { // same day 
+                  return moment(endTime).format("D MMM YYYY");
+                }
+                else { // multiple days
+                  return moment(startTime).format("D")+"–"+moment(endTime).format("D MMM YYYY");
+                }
+              }, 
+              buttonTextColor: function(color) { return idealTextColor(this.get('color.primary_dark')); }
+            }
+          });
+
+          ractive = new Ractive({
+            el: 'events-container',
+            template: '{{#events:idx}}<event/>{{/events}}',
+            data: {
+              events: data.events
+            },
+            components: { event: eventComponent }
+          });
+
+          ractive = new Ractive({
+            el: 'conf-container',
+            template: '{{#conferences:idx}}<conf/>{{/conferences}}',
+            data: {
+              conferences: data.conferences
+            },
+            components: { conf: confComponent }
+          });
+
+        })
+        .fail(function( jqxhr, textStatus, error ) {
+          var err = textStatus + ", " + error;
+          console.log("Request Failed: " + err );
+        });
+    }
+
+    function loadConferences() {
+      $.getJSON("https://hasgeek.github.io/events/conferences.json")
+        .done(function success(data) {
+          
+        })
+        .fail(function( jqxhr, textStatus, error ) {
+          var err = textStatus + ", " + error;
+          console.log("Request Failed: " + err );
+        });
+    }
+
+    function idealTextColor(bgColor) {
+      var nThreshold = 105;
+      var components = getRGBComponents(bgColor);
+      var bgDelta = (components.R * 0.299) + (components.G * 0.587) + (components.B * 0.114);
+      return ((255 - bgDelta) < nThreshold) ? "#000000" : "#ffffff";
+    }
+
+    function getRGBComponents(color) {
+      var r = color.substring(1, 3);
+      var g = color.substring(3, 5);
+      var b = color.substring(5, 7);
+
+      return {
+        R: parseInt(r, 16),
+        G: parseInt(g, 16),
+        B: parseInt(b, 16)
+      };
+    }
+</script>
+{% endraw %}
 {% endblock %}
