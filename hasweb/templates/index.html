@@ -210,8 +210,11 @@
         .done(function success(data) {
 
           eventComponent = Ractive.extend({
-            template: '{{>event-card}}',
+            template: '{{#if inFuture}}{{>event-card}}{{/if}}',
             computed: {
+              inFuture: function() {
+                return new Date(this.get('start_time')) > new Date();
+              },
               date: function () {
                 startTime = new Date(this.get('start_time'));
                 endTime = new Date(this.get('end_time'));
@@ -227,8 +230,11 @@
           });
 
           confComponent = Ractive.extend({
-            template: '{{>conf-card}}',
+            template: '{{#if inFuture}}{{>conf-card}}{{/if}}',
             computed: {
+              inFuture: function() {
+                return new Date(this.get('start_time')) > new Date();
+              },
               date: function () {
                 startTime = new Date(this.get('start_time'));
                 endTime = new Date(this.get('end_time'));
