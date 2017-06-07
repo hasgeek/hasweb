@@ -16,6 +16,7 @@
   padding: 10px;
   padding-top: 0px;
   margin-bottom: 10px;
+  min-height: 280px;
 }
 .conf-card-title-block {
   background-color: #604E6E;
@@ -36,6 +37,11 @@
 .conf-card-blurb {
   color: white;
   padding-top: 10px;
+  padding-bottom: 30px;
+}
+.conf-card-btn-group {
+  position: absolute;
+  bottom: 20px;
 }
 .conf-card-btn {
   color: #fff;
@@ -68,7 +74,7 @@
   padding: 10px;
   padding-top: 0px;
   margin-bottom: 10px;
-  min-height: 200px;
+  min-height: 280px;
 }
 .event-card-title-block {
   border-bottom: 1px solid #856a91;
@@ -85,6 +91,11 @@
 }
 .event-card-blurb {
   padding-top: 10px;
+  padding-bottom: 30px;
+}
+.event-card-btn-group {
+  position: absolute;
+  bottom: 20px;
 }
 .event-card-btn {
   color: #fff;

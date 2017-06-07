@@ -40,22 +40,14 @@
       </p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-8">
+  <div class="container" id="app">
       <h2>Upcoming Events</h2>
-      <ul class="row cardset" id="events-container"><h2 class="text-center"><span class="loading">&nbsp;</span></h2></ul>
-    </div>
-    <div class="col-md-4">
+      <div id="events-container"><h2 class="text-center"><span class="loading">&nbsp;</span></h2></div>
+  </div>
+  <div class="container">
       <h2>Upcoming Conferences</h2>
       <div id="conf-container"><h2 class="text-center"><span class="loading">&nbsp;</span></h2></div>
-    </div>
   </div>
-  <div class="row" >
-    
-  </div>
-  <ul class="row cardset" >
-    
-  </ul>
   <div class="row">
     <div class="col-md-12 masthead">
       <p>
@@ -105,7 +97,7 @@
         <a href="https://metarefresh.in/2012/">Meta Refresh 2012</a>,
         <a href="https://workshop.cartonama.com/">Cartonama Workshop</a>,
         JSFoo 2011-12 (in
-          <a href="https://jsfoo.in/bangalore2011">Bangalore</a>, 
+          <a href="https://jsfoo.in/bangalore2011">Bangalore</a>,
           <a href="https://jsfoo.in/pune2012">Pune</a>, and
           <a href="https://jsfoo.in/chennai2012">Chennai</a>),
         <a href="https://droidcon.in/2011">Droidcon India 2011</a>,
@@ -119,25 +111,43 @@
 {% block footerscripts %}
 {% raw %}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script id='event-card' type='text/ractive'>
+  <div class="col-md-4 col-sm-6">
+    <div class="event-card">
+      <div class="event-card-title-block">
+        <h2 class="event-card-title">{{ title }}</h2>
+        <small class="event-card-title-date">{{ date }}, {{ city }}</small>
+      </div>
+      <p class="event-card-blurb">{{ blurb }}</p>
+      <div class="event-card-btn-group">
+      {{#if url}}
+      <a href="{{ url }}" class="btn btn-sm btn-info event-card-btn-url">Attend</a>
+      {{/if}}
+      </div>
+    </div>
+  </div>
+</script>
 <script id='conf-card' type='text/ractive'>
   {{#if color}}
     {{>style-conf-card}}
   {{/if}}
-  <!-- <div class="col-md-6 col-sm-6"> -->
+  <div class="col-md-4 col-sm-6">
     <div class="conf-card conf-card-{{idx}}">
       <div class="conf-card-title-block conf-card-title-block-{{idx}}">
         <h2 class="conf-card-title conf-card-title-{{idx}}">{{ title }}</h2>
         <small class="conf-card-title-date conf-card-title-date-{{idx}}">{{ date }}, {{ city }}</small>
       </div>
       <p class="conf-card-blurb conf-card-blurb-{{idx}}">{{ blurb }}</p>
-      {{#if url}}
-      <a href="{{ url }}" class="btn btn-sm btn-info conf-card-btn-url conf-card-btn-url-{{idx}}"><i class="fa fa-ticket"></i> Tickets</a>
-      {{/if}}
-      {{#funnel}}
-      <a href="{{ funnel }}" class="btn btn-sm btn-info conf-card-btn-funnel conf-card-btn-funnel-{{idx}}"><i class="fa fa-file-text-o"></i> Call for proposals</a>
-      {{/if}}
+      <div class="conf-card-btn-group">
+        {{#if url}}
+        <a href="{{ url }}" class="btn btn-sm btn-info conf-card-btn-url conf-card-btn-url-{{idx}}"><i class="fa fa-ticket"></i> Tickets</a>
+        {{/if}}
+        {{#funnel}}
+        <a href="{{ funnel }}" class="btn btn-sm btn-info conf-card-btn-funnel conf-card-btn-funnel-{{idx}}"><i class="fa fa-file-text-o"></i> Call for proposals</a>
+        {{/if}}
+      </div>
     </div>
-  <!-- </div> -->
+  </div>
 </script>
 <script id='style-conf-card' type='text/ractive'>
 <style type="text/css">
@@ -172,33 +182,6 @@
   }
 </style>
 </script>
-<script id='event-card' type='text/ractive'>
-  <div class="col-md-6 col-sm-6">
-    <div class="event-card">
-      <div class="event-card-title-block">
-        <h2 class="event-card-title">{{ title }}</h2>
-        <small class="event-card-title-date">{{ date }}, {{ city }}</small>
-      </div>
-      <p class="event-card-blurb">{{ blurb }}</p>
-      {{#if url}}
-      <a href="{{ url }}" class="btn btn-sm btn-info event-card-btn-url">Attend</a>
-      {{/if}}
-    </div>
-  </div>
-</script>
-<!-- <script id='event-card' type='text/ractive'>
-  <li class="col-md-6 col-sm-6">
-    <a href="{{ url }}">
-      <div class="card-title">
-        <h2>{{ title }}</h2>
-        <h3>{{ date }}, {{ venue }}, {{ city }}.</h3>
-      </div>
-      <div class="card-body">
-        {{ blurb }}
-      </div>
-    </a>
-  </li>
-</script> -->
 <script>
 
     $(document).ready(function (argument) {
@@ -218,13 +201,13 @@
               date: function () {
                 startTime = new Date(this.get('start_time'));
                 endTime = new Date(this.get('end_time'));
-                if (startTime.toDateString() === endTime.toDateString()) { // same day 
+                if (startTime.toDateString() === endTime.toDateString()) { // same day
                   return moment(startTime).format('ddd, D MMM, hA')+"-"+moment(endTime).format("hA");
                 }
                 else { // multiple days
                   return moment(startTime).format("D")+"–"+moment(endTime).format("D MMM YYYY");
                 }
-              }, 
+              },
               buttonTextColor: function(color) { return idealTextColor(this.get('color.primary_dark')); }
             }
           });
@@ -238,13 +221,13 @@
               date: function () {
                 startTime = new Date(this.get('start_time'));
                 endTime = new Date(this.get('end_time'));
-                if (startTime.toDateString() === endTime.toDateString()) { // same day 
+                if (startTime.toDateString() === endTime.toDateString()) { // same day
                   return moment(endTime).format("D MMM YYYY");
                 }
                 else { // multiple days
                   return moment(startTime).format("D")+"–"+moment(endTime).format("D MMM YYYY");
                 }
-              }, 
+              },
               buttonTextColor: function(color) { return idealTextColor(this.get('color.primary_dark')); }
             }
           });
@@ -277,7 +260,7 @@
     function loadConferences() {
       $.getJSON("https://hasgeek.github.io/events/conferences.json")
         .done(function success(data) {
-          
+
         })
         .fail(function( jqxhr, textStatus, error ) {
           var err = textStatus + ", " + error;
