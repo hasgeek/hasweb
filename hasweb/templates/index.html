@@ -196,7 +196,7 @@
             template: '{{#if inFuture}}{{>event-card}}{{/if}}',
             computed: {
               inFuture: function() {
-                return new Date(this.get('start_time')) > new Date();
+                return new Date(this.get('end_time')) > new Date();
               },
               date: function () {
                 startTime = new Date(this.get('start_time'));
