@@ -11,11 +11,11 @@ We are a small group of broad-minded geeks, communicators, and overall nice peop
 * Karthik Balakrishnan ([@karthikb351](https://twitter.com/karthikb351))
 * Kiran Jonnalagadda, director ([@jackerhack](https://twitter.com/jackerhack))
 * Manjunath AK ([@manjuak](https://twitter.com/manjuak))
-* Murali Krishna ([@ajmuralikrishna](https://twitter.com/ajmuralikrishna))
-* Raghu Mohan ([@pythonhulk](https://twitter.com/pythonhulk))
 * Sandhya Ramesh ([@sandygrains](https://twitter.com/sandygrains))
 * Shreyas Narayanan ([@dun3buggi3](https://twitter.com/dun3buggi3))
 * Shreyas Satish ([@shreyas_satish](https://twitter.com/shreyas_satish))
+* Stephanie Browne
+* Kristen McQuillin ([@mediatinker](https://twitter.com/mediatinker))
 * Vidya Ramakrishnan ([@vidya_ramki](https://twitter.com/vidya_ramki))
 * Zainab Bawa, director ([@zainabbawa](https://twitter.com/zainabbawa))
 
