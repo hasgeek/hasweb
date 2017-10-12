@@ -7,13 +7,13 @@ from .. import app, pages
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html.jinja2')
 
 
 @app.route('/about/', defaults={'path': 'index'})
 @app.route('/about/<path:path>')
 def about(path):
-    return render_template('about.html', page=pages.get_or_404(os.path.join('about', path)))
+    return render_template('about.html.jinja2', page=pages.get_or_404(os.path.join('about', path)))
 
 
 @app.route('/about/policy/')
