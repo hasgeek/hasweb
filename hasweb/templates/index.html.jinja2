@@ -1,5 +1,5 @@
-{% extends "layout.html" %}
-{% from "baseframe/components.html" import responsive_networkbar with context -%}
+{% extends "layout.html.jinja2" %}
+{% from "baseframe/components.html.jinja2" import responsive_networkbar with context -%}
 {% block titletags -%}
   <title>{% block title %}{{ config['SITE_TITLE'] }}{% endblock %}</title>
   <meta name="DC.title" content="{{ config['SITE_TITLE'] }}"/>

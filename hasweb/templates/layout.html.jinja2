@@ -1,5 +1,5 @@
-{% extends "baseframe.html" -%}
-{% from "baseframe/components.html" import responsive_networkbar with context %}
+{% extends "baseframe.html.jinja2" -%}
+{% from "baseframe/components.html.jinja2" import responsive_networkbar with context %}
 
 {% block networkbar %}{{ responsive_networkbar(siteid=config['SITE_ID'], login=false) }}{% endblock %}
 
@@ -37,7 +37,7 @@
       <p>
         Hosted by <a href="http://e2enetworks.com/">E2E Networks</a>
       </p>
-    </div>    
+    </div>
   </div>
 {%- endblock %}
 
