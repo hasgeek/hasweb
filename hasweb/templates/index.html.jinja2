@@ -200,13 +200,13 @@
                 return new Date(this.get('end_time')) > new Date();
               },
               date: function () {
-                startTime = new Date(this.get('start_time'));
-                endTime = new Date(this.get('end_time'));
-                if (startTime.toDateString() === endTime.toDateString()) { // same day
-                  return moment(startTime).tz("Asia/Colombo").format('ddd, D MMM, hA')+"-"+moment(endTime).tz("Asia/Colombo").format("hA");
+                startTime = moment(this.get('start_time')).tz("Asia/Kolkata")
+                endTime = moment(this.get('end_time')).tz("Asia/Kolkata")
+                if (startTime.format("D MMM YYYY") === endTime.format("D MMM YYYY")) { // same day
+                  return startTime.format('ddd, D MMM, h:mmA')+"-"+endTime.format("h:mmA");
                 }
                 else { // multiple days
-                  return moment(startTime).tz("Asia/Colombo").format("D")+"–"+moment(endTime).tz("Asia/Colombo").format("D MMM YYYY");
+                  return startTime.format("D")+"–"+endTime.format("D MMM YYYY");
                 }
               },
               buttonTextColor: function(color) { return idealTextColor(this.get('color.primary_dark')); }
@@ -220,13 +220,13 @@
                 return new Date(this.get('start_time')) > new Date();
               },
               date: function () {
-                startTime = new Date(this.get('start_time'));
-                endTime = new Date(this.get('end_time'));
-                if (startTime.toDateString() === endTime.toDateString()) { // same day
-                  return moment(endTime).tz("Asia/Colombo").format("D MMM YYYY");
+                startTime = moment(this.get('start_time')).tz("Asia/Kolkata")
+                endTime = moment(this.get('end_time')).tz("Asia/Kolkata")
+                if (startTime.format("D MMM YYYY") === endTime.format("D MMM YYYY")) { // same day
+                  return startTime.format('ddd, D MMM, h:mmA')+"-"+endTime.format("h:mmA");
                 }
                 else { // multiple days
-                  return moment(startTime).tz("Asia/Colombo").format("D")+"–"+moment(endTime).tz("Asia/Colombo").format("D MMM YYYY");
+                  return startTime.format("D")+"–"+endTime.format("D MMM YYYY");
                 }
               },
               buttonTextColor: function(color) { return idealTextColor(this.get('color.primary_dark')); }
