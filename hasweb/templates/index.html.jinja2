@@ -111,6 +111,7 @@
 {% block footerscripts %}
 {% raw %}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data.min.js"></script>
 <script id='event-card' type='text/ractive'>
   <div class="col-md-4 col-sm-6">
     <div class="event-card">
@@ -202,10 +203,10 @@
                 startTime = new Date(this.get('start_time'));
                 endTime = new Date(this.get('end_time'));
                 if (startTime.toDateString() === endTime.toDateString()) { // same day
-                  return moment(startTime).format('ddd, D MMM, hA')+"-"+moment(endTime).format("hA");
+                  return moment(startTime).tz("Asia/Colombo").format('ddd, D MMM, hA')+"-"+moment(endTime).format("hA");
                 }
                 else { // multiple days
-                  return moment(startTime).format("D")+"–"+moment(endTime).format("D MMM YYYY");
+                  return moment(startTime).tz("Asia/Colombo").format("D")+"–"+moment(endTime).format("D MMM YYYY");
                 }
               },
               buttonTextColor: function(color) { return idealTextColor(this.get('color.primary_dark')); }
@@ -222,10 +223,10 @@
                 startTime = new Date(this.get('start_time'));
                 endTime = new Date(this.get('end_time'));
                 if (startTime.toDateString() === endTime.toDateString()) { // same day
-                  return moment(endTime).format("D MMM YYYY");
+                  return moment(endTime).tz("Asia/Colombo").format("D MMM YYYY");
                 }
                 else { // multiple days
-                  return moment(startTime).format("D")+"–"+moment(endTime).format("D MMM YYYY");
+                  return moment(startTime).tz("Asia/Colombo").format("D")+"–"+moment(endTime).format("D MMM YYYY");
                 }
               },
               buttonTextColor: function(color) { return idealTextColor(this.get('color.primary_dark')); }
