@@ -203,7 +203,7 @@
                 startTime = moment(this.get('start_time')).tz("Asia/Kolkata")
                 endTime = moment(this.get('end_time')).tz("Asia/Kolkata")
                 if (startTime.format("D MMM YYYY") === endTime.format("D MMM YYYY")) { // same day
-                  return startTime.format('ddd, D MMM, h:mmA')+"-"+endTime.format("h:mmA");
+                  return startTime.format('ddd D MMM, h:mm a')+"–"+endTime.format("h:mm a");
                 }
                 else { // multiple days
                   return startTime.format("D")+"–"+endTime.format("D MMM YYYY");
@@ -223,7 +223,7 @@
                 startTime = moment(this.get('start_time')).tz("Asia/Kolkata")
                 endTime = moment(this.get('end_time')).tz("Asia/Kolkata")
                 if (startTime.format("D MMM YYYY") === endTime.format("D MMM YYYY")) { // same day
-                  return startTime.format('ddd, D MMM, h:mmA')+"-"+endTime.format("h:mmA");
+                  return startTime.format('ddd D MMM, h:mm a')+"–"+endTime.format("h:mm a");
                 }
                 else { // multiple days
                   return startTime.format("D")+"–"+endTime.format("D MMM YYYY");
