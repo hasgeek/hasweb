@@ -122,7 +122,7 @@
       <p class="event-card-blurb">{{ blurb }}</p>
       <div class="event-card-btn-group">
       {{#if url}}
-      <a href="{{ url }}" class="btn btn-sm btn-info event-card-btn-url">Attend</a>
+      <a href="{{ url }}" class="btn btn-info event-card-btn-url">Attend</a>
       {{/if}}
       </div>
     </div>
@@ -152,11 +152,6 @@
 </script>
 <script id='style-conf-card' type='text/ractive'>
 <style type="text/css">
-  .conf-card-{{idx}} {
-    background-color: {{ color.primary }};
-    border-color: {{ color.primary_dark }};
-  }
-
   .conf-card-title-block-{{idx}} {
     background-color: {{ color.primary_dark }};
   }

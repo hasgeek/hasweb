@@ -17,13 +17,14 @@ $body-line-height: 20px;
 
 
 .conf-card {
-    background-color: #816894;
-    border: solid 2px;
-    border-color: #604E6E;
+    background-color: #fff;
+    border: 1px solid #ccc;
     padding: 10px;
     padding-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     min-height: 310px;
+    box-shadow: 0 1px 3px rgba(158,158,158,0.12), 0 1px 2px rgba(158,158,158,0.24);
+    position: relative;
 
     &-title-block {
         background-color: #604E6E;
@@ -49,7 +50,8 @@ $body-line-height: 20px;
     }
     &-btn-group {
       position: absolute;
-      bottom: 20px;
+      bottom: 15px;
+      right: 15px;
     }
     &-btn {
         color: #fff;
@@ -78,12 +80,13 @@ $body-line-height: 20px;
 
 .event-card {
     background-color: white;
-    border: solid 1px;
-    border-color: #856a91;
+    border: 1px solid #ccc;
     padding: 10px;
     padding-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     min-height: 310px;
+    box-shadow: 0 1px 3px rgba(158,158,158,0.12), 0 1px 2px rgba(158,158,158,0.24);
+    position: relative;
 
     &-title-block {
         border-bottom: 1px solid #856a91;
@@ -104,7 +107,8 @@ $body-line-height: 20px;
     }
     &-btn-group {
       position: absolute;
-      bottom: 20px;
+      bottom: 15px;
+      right: 15px
     }
     &-btn {
         color: #fff;
