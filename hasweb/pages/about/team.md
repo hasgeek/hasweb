@@ -5,7 +5,7 @@ We are a small group of broad-minded geeks, communicators, and overall nice peop
 * Abhishek Balaji ([@booleanbalaji](https://twitter.com/booleanbalaji))
 * Akshay Bhalotia ([@akshay_bhalotia](https://twitter.com/akshay_bhalotia))
 * Anish TP ([@tepotheus](https://twitter.com/tepotheus))
-* Arun Teja Godavarthi ([@aruntejagod](https://twitter.com/aruntejagod))
+* Arun Teja Godavarthi ([@zeospec](https://twitter.com/zeospec))
 * Bibhas Debnath ([@bibhasdn](https://twitter.com/bibhasdn))
 * Hari CM ([@haricm](http://twitter.com/haricm))
 * Jayalakshmi AG
