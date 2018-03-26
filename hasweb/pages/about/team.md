@@ -3,12 +3,13 @@ title: HasGeek team
 We are a small group of broad-minded geeks, communicators, and overall nice people.
 
 * Abhishek Balaji ([@booleanbalaji](https://twitter.com/booleanbalaji))
+* Akshay Bhalotia ([@akshay_bhalotia](https://twitter.com/akshay_bhalotia))
 * Anish TP ([@tepotheus](https://twitter.com/tepotheus))
+* Arun Teja Godavarthi ([@zeospec](https://twitter.com/zeospec))
 * Bibhas Debnath ([@bibhasdn](https://twitter.com/bibhasdn))
 * Hari CM ([@haricm](http://twitter.com/haricm))
 * Jayalakshmi AG
 * Jyothsna Madabusi
-* Karthik Balakrishnan ([@karthikb351](https://twitter.com/karthikb351))
 * Kiran Jonnalagadda, director ([@jackerhack](https://twitter.com/jackerhack))
 * Kristen McQuillin ([@mediatinker](https://twitter.com/mediatinker))
 * Manjunath AK ([@manjuak](https://twitter.com/manjuak))
