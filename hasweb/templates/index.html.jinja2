@@ -113,7 +113,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data.min.js"></script>
 <script id='event-card' type='text/ractive'>
-  <div class="col-md-4 col-sm-6">
+  <div class="col-md-4 col-sm-6 card-wrapper">
     <div class="event-card">
       <div class="event-card-title-block">
         <h2 class="event-card-title">{{ title }}</h2>
@@ -122,7 +122,7 @@
       <p class="event-card-blurb">{{ blurb }}</p>
       <div class="event-card-btn-group">
       {{#if url}}
-      <a href="{{ url }}" class="btn btn-info event-card-btn-url">Attend</a>
+      <a href="{{ url }}" class="btn btn-info event-card-btn-url" target="_blank" data-action="Attend">Attend</a>
       {{/if}}
       </div>
     </div>
@@ -132,7 +132,7 @@
   {{#if color}}
     {{>style-conf-card}}
   {{/if}}
-  <div class="col-md-4 col-sm-6">
+  <div class="col-md-4 col-sm-6 card-wrapper">
     <div class="conf-card conf-card-{{idx}}">
       <div class="conf-card-title-block conf-card-title-block-{{idx}}">
         <h2 class="conf-card-title conf-card-title-{{idx}}">{{ title }}</h2>
@@ -141,10 +141,10 @@
       <p class="conf-card-blurb conf-card-blurb-{{idx}}">{{ blurb }}</p>
       <div class="conf-card-btn-group">
         {{#if url}}
-        <a href="{{ url }}" class="btn btn-sm btn-info conf-card-btn-url conf-card-btn-url-{{idx}}"><i class="fa fa-ticket"></i> Tickets</a>
+        <a href="{{ url }}" class="btn btn-sm btn-info conf-card-btn-url conf-card-btn-url-{{idx}}" target="_blank" data-action="Buy tickets"><i class="fa fa-ticket"></i> Tickets</a>
         {{/if}}
         {{#if funnel}}
-        <a href="{{ funnel }}" class="btn btn-sm btn-info conf-card-btn-funnel conf-card-btn-funnel-{{idx}}"><i class="fa fa-file-text-o"></i> Call for proposals</a>
+        <a href="{{ funnel }}" class="btn btn-sm btn-info conf-card-btn-funnel conf-card-btn-funnel-{{idx}}" target="_blank" data-action="View proposals"><i class="fa fa-file-text-o"></i> Call for proposals</a>
         {{/if}}
       </div>
     </div>
@@ -234,6 +234,13 @@
             data: {
               events: data.events
             },
+            complete: function() {
+              $('#events-container .btn').click(function(event) {
+                var target = $(this).attr('href');
+                var action = $(this).data('action');
+                HasWeb.sendGA('click', action, target);
+              });
+            },
             components: { event: eventComponent }
           });
 
@@ -242,6 +249,13 @@
             template: '{{#conferences:idx}}<conf/>{{/conferences}}',
             data: {
               conferences: data.conferences
+            },
+            complete: function() {
+              $('#conf-container .btn').click(function(event) {
+                var target = $(this).attr('href');
+                var action = $(this).data('action');
+                HasWeb.sendGA('click', action, target);
+              });
             },
             components: { conf: confComponent }
           });

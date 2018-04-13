@@ -63,7 +63,9 @@
     ga('create', 'UA-19123154-1', 'auto');
     ga('send', 'pageview');
     $(document).ready( function() {
-      EventDetails.sendGA = function (category, action, label) {
+      window.HasWeb = {};
+
+      HasWeb.sendGA = function (category, action, label) {
         if (typeof ga !== "undefined") {
           ga('send', { hitType: 'event', eventCategory: category, eventAction: action, eventLabel: label});
         }
@@ -72,12 +74,12 @@
       $('.btn').click(function(event) {
         var target = $(this).attr('href');
         var action = $(this).html();
-        EventDetails.sendGA('click', action, target);
+        HasWeb.sendGA('click', action, target);
       });
       $('.click').click(function(event) {
         var target = $(this).attr('href');
         var action = "Click"
-        EventDetails.sendGA('click', action, target);
+        HasWeb.sendGA('click', action, target);
       });
     });
   </script>
