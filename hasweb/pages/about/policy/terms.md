@@ -4,7 +4,7 @@ These are the terms under which you, the User, may use this Service.
 
 ## Definitions and legal references
 
-The terms “**HasGeek Learning Private Limited**”, “**HasGeek**”, “**us**”, “**we**” and “**our**” refer to the owner of the Service whose registered office is at No 141/142, 2nd Cross, Pai Layout, Hulimavu Gate, Bannerghatta Road, Bangalore - 560 076, Karnataka, India. Our registration number is U74900KA2015PTC083923 and we are incorporated under the Companies Act 2013 of India.
+The terms “**HasGeek Learning Private Limited**”, “**HasGeek**”, “**us**”, “**we**” and “**our**” refer to the owner of the Service whose registered office is at #2699, 19th Main, 5th Cross, Indiranagar HAL 2nd Stage, Bangalore - 560 078, Karnataka, India. Our registration number is U74900KA2015PTC083923 and we are incorporated under the Companies Act 2013 of India.
 
 Definition of other terms used in this document:
 
