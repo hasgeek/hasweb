@@ -132,16 +132,27 @@
   {{#if color}}
     {{>style-conf-card}}
   {{/if}}
-  <div class="col-md-4 col-sm-6 card-wrapper">
+  <div class="col-md-4 col-sm-6 card-wrapper" itemscope itemtype="http://schema.org/Event">
     <div class="conf-card conf-card-{{idx}}">
       <div class="conf-card-title-block conf-card-title-block-{{idx}}">
-        <h2 class="conf-card-title conf-card-title-{{idx}}">{{ title }}</h2>
-        <small class="conf-card-title-date conf-card-title-date-{{idx}}">{{ date }}, {{ city }}</small>
+        <h2 class="conf-card-title conf-card-title-{{idx}}" itemprop="name">{{ title }}</h2>
+        <small class="conf-card-title-date conf-card-title-date-{{idx}}">{{ date }}</small>
+        <span itemprop="startDate" content="{{ start_time }}"></span>
+        <span itemprop="endDate" content="{{ end_time }}"></span>
+        <div class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+          <span itemprop="name" class="conf-card-title-date">{{ venue }}</span>
+          <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="addressLocality" class="conf-card-title-date">{{ city }}</span>
+          </div>
+        </div>
+        {{#if logo}}
+          <img alt="{{ title }}" src="{{ logo }}" itemprop="image"/>
+        {{/if}}
       </div>
-      <p class="conf-card-blurb conf-card-blurb-{{idx}}">{{ blurb }}</p>
-      <div class="conf-card-btn-group">
+      <p class="conf-card-blurb conf-card-blurb-{{idx}}" itemprop="description">{{ blurb }}</p>
+      <div class="conf-card-btn-group offers" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
         {{#if url}}
-        <a href="{{ url }}" class="btn btn-sm btn-info conf-card-btn-url conf-card-btn-url-{{idx}}" target="_blank" data-action="Buy tickets"><i class="fa fa-ticket"></i> Tickets</a>
+        <a href="{{ url }}" class="btn btn-sm btn-info conf-card-btn-url conf-card-btn-url-{{idx}}" target="_blank" data-action="Buy tickets" itemprop="url"><i class="fa fa-ticket"></i> Tickets</a>
         {{/if}}
         {{#if funnel}}
         <a href="{{ funnel }}" class="btn btn-sm btn-info conf-card-btn-funnel conf-card-btn-funnel-{{idx}}" target="_blank" data-action="View proposals"><i class="fa fa-file-text-o"></i> Call for proposals</a>
@@ -234,7 +245,7 @@
             data: {
               events: data.events
             },
-            complete: function() {
+            oncomplete: function() {
               $('#events-container .btn').click(function(event) {
                 var target = $(this).attr('href');
                 var action = $(this).data('action');
@@ -250,12 +261,16 @@
             data: {
               conferences: data.conferences
             },
-            complete: function() {
+            oncomplete: function() {
               $('#conf-container .btn').click(function(event) {
                 var target = $(this).attr('href');
                 var action = $(this).data('action');
                 HasWeb.sendGA('click', action, target);
               });
+              $('.card-wrapper').attr('itemscope', '');
+              $('.location').attr('itemscope', '');
+              $('.address').attr('itemscope', '');
+              $('.offers').attr('itemscope', '');
             },
             components: { conf: confComponent }
           });

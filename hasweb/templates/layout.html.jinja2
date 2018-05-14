@@ -3,6 +3,34 @@
 
 {% block networkbar %}{{ responsive_networkbar(siteid=config['SITE_ID'], login=false) }}{% endblock %}
 
+{%- block layoutheaders %}
+<script type="application/ld+json">
+  {  "@context" : "http://schema.org",
+     "@type" : "WebSite",
+     "name" : "{{ config['SITE_TITLE'] }}",
+     "url" : "{{ url_for('index', _external=true) }}"
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "name" : "{{ config['SITE_TITLE'] }}",
+    "url" : "{{ url_for('index', _external=true) }}",
+    "logo" : "{{ url_for('static', filename='img/hg-banner.png', _external=true) }}",
+    "contactPoint" : [{
+      "@type" : "ContactPoint",
+      "telephone" : "+91 7676 33 2020",
+      "contactType" : "customer service"
+    }],
+    "sameAs" : [
+      "https://twitter.com/hasgeek",
+      "https://www.facebook.com/hasgeek"
+    ]
+  }
+</script>
+{%- endblock %}
+
 {% block baseheadline -%}
   {% block headline -%}
     <h1>{{ self.title()|e }}</h1>
