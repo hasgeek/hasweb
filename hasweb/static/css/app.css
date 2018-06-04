@@ -343,3 +343,9 @@ footer .container {
     line-height: 40px;
   }
 }
+@media screen and (max-width: 600px) {
+  .fb_iframe_widget {
+    overflow-y: scroll;
+    width: 100%;
+  }
+}

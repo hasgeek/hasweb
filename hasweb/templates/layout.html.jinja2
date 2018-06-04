@@ -57,9 +57,9 @@
     </div>
     <div class="col-md-3">
       <p id="footer-twitter">
-        <a href="https://twitter.com/hasgeek" class="twitter-follow-button">Follow @hasgeek</a>
+        <a href="https://twitter.com/hasgeek" class="twitter-follow-button" target="_blank">Follow @hasgeek</a>
       </p>
-      <div class="fb-follow" data-href="https://www.facebook.com/HasGeek" data-layout="standard" data-show-faces="true">Follow on Facebook</div>
+      <div class="fb-like" data-href="https://www.facebook.com/HasGeek" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
     </div>
     <div class="col-md-3">
       <p>
@@ -76,7 +76,7 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=114496105304651";
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
   <script src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
