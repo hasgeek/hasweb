@@ -347,5 +347,6 @@ footer .container {
   .fb_iframe_widget {
     overflow-y: scroll;
     width: 100%;
+    display: inline-block !important;
   }
 }
